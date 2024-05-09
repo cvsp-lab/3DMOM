@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <!-- Meta tags for social media banners, these should be filled in appropriatly as they are your "business card" -->
+  <!-- Replace the content tag with appropriate information -->
+  <meta name="description" content="DESCRIPTION META TAG">
+  <meta property="og:title" content="SOCIAL MEDIA TITLE TAG"/>
+  <meta property="og:description" content="SOCIAL MEDIA DESCRIPTION TAG TAG"/>
+  <meta property="og:url" content="URL OF THE WEBSITE"/>
+  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X630-->
+  <meta property="og:image" content="static/image/your_banner_image.png" />
+  <meta property="og:image:width" content="1200"/>
+  <meta property="og:image:height" content="630"/>
+
+
+  <meta name="twitter:title" content="TWITTER BANNER TITLE META TAG">
+  <meta name="twitter:description" content="TWITTER BANNER DESCRIPTION META TAG">
+  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X600-->
+  <meta name="twitter:image" content="static/images/your_twitter_banner_image.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <!-- Keywords for your paper to be indexed by-->
+  <meta name="keywords" content="KEYWORDS SHOULD BE PLACED HERE">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+  <title>Motion-to-Attention: Attention Motion Composer using Optical Flow for Text-to-Video Editing</title>
+  <link rel="icon" type="image/x-icon" href="static/images/favicon.ico">
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+  rel="stylesheet">
+
+  <link rel="stylesheet" href="static/css/bulma.min.css">
+  <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+  href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="static/css/index.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
+  <script defer src="static/js/fontawesome.all.min.js"></script>
+  <script src="static/js/bulma-carousel.min.js"></script>
+  <script src="static/js/bulma-slider.min.js"></script>
+  <script src="static/js/index.js"></script>
+<body>
+
+
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <h1 class="title is-1 publication-title">Motion-to-Attention: Attention Motion Composer using Optical Flow for Text-to-Video Editing</h1>
+            <div class="is-size-5 publication-authors">
+              <!-- Paper authors -->
+              <span class="author-block">
+                <a href="FIRST AUTHOR PERSONAL LINK" target="_blank">First Author</a><sup>*</sup>,</span>
+                <span class="author-block">
+                  <a href="SECOND AUTHOR PERSONAL LINK" target="_blank">Second Author</a><sup>*</sup>,</span>
+                  <span class="author-block">
+                    <a href="THIRD AUTHOR PERSONAL LINK" target="_blank">Third Author</a>
+                  </span>
+                  </div>
+
+                  <div class="is-size-5 publication-authors">
+                    <span class="author-block">Institution Name<br>Conferance name and year</span>
+                    <span class="eql-cntrb"><small><br><sup>*</sup>Indicates Equal Contribution</small></span>
+                  </div>
+
+                  <div class="column has-text-centered">
+                    <div class="publication-links">
+                         <!-- Arxiv PDF link -->
+                      <span class="link-block">
+                        <a href="static/pdfs/Motion_to_Attention__Attention_Motion_Composer_using_Optical_Flow_for_Text_to_Video_Editing.pdf" target="_blank"
+                        class="external-link button is-normal is-rounded is-dark">
+                        <span class="icon">
+                          <i class="fas fa-file-pdf"></i>
+                        </span>
+                        <span>Paper</span>
+                      </a>
+                    </span>
+
+                    <!-- Supplementary PDF link -->
+                    <span class="link-block">
+                      <a href="" target="_blank"
+                      class="external-link button is-normal is-rounded is-dark">
+                      <span class="icon">
+                        <i class="fas fa-file-pdf"></i>
+                      </span>
+                      <span>Supplementary</span>
+                    </a>
+                  </span>
+
+                  <!-- Github link -->
+                  <span class="link-block">
+                    <a href="https://github.com/currycurry915/M2A" target="_blank"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fab fa-github"></i>
+                    </span>
+                    <span>Code</span>
+                  </a>
+                </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+       
+<!-- Image carousel -->
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div id="results-carousel" class="carousel results-carousel">
+        <div class="item">
+        <!-- Video-P2P -->
+        <img class="center-img" src="static/labels/cvpr_label_video-p2p_4f.png", width="100%", style="padding-top: 2%;">
+        <img class="center-img" src="static/videos/4frame/seeds/inversion.gif", width="33.3%">
+        <img class="center-img" src="static/videos/4frame/seeds/video-p2p_original.gif", width="33.3%">
+        <img class="center-img" src="static/videos/4frame/seeds/ours.gif", width="33.3%">
+        <img class="center-img" src="static/prompt/seed_bubble.png", width="100%">
+      </div>
+       <div class="item">
+        <!-- Video-P2P -->
+        <img class="center-img" src="static/labels/cvpr_label_video-p2p_4f.png", width="100%", style="padding-top: 2%;">
+        <img class="center-img" src="static/videos/4frame/steel/inversion.gif", width="33.3%">
+        <img class="center-img" src="static/videos/4frame/steel/original.gif", width="33.3%">
+        <img class="center-img" src="static/videos/4frame/steel/ours.gif", width="33.3%">
+        <img class="center-img" src="static/prompt/seed_bubble.png", width="100%">
+      </div>
+        <div class="item">
+        <!-- Your image here -->
+        <img class="center-img" src="static/labels/cvpr_label_video-p2p_4f.png", width="100%", style="padding-top: 2%;">
+        <img class="center-img" src="static/images/clouds_waves_input.gif", width="33.3%">
+        <img class="center-img" src="static/images/clouds_waves_ori.gif", width="33.3%">
+        <img class="center-img" src="static/images/clouds_waves_MMI.gif", width="33.3%">
+        <img class="center-img" src="static/prompt/cloud_waves.png", width="100%">
+      </div>
+      <div class="item">
+        <!-- Your image here -->
+        <img class="center-img" src="static/labels/cvpr_label_video-p2p_4f.png", width="100%", style="padding-top: 2%;">
+        <img class="center-img" src="static/images/bubble_duck_input.gif", width="33.3%">
+        <img class="center-img" src="static/images/bubble_duck_ori.gif", width="33.3%">
+        <img class="center-img" src="static/images/bubble_duck_MMI.gif", width="33.3%">
+        <img class="center-img" src="static/prompt/bubble_duck.png", width="100%">
+      </div>
+     <div class="item">
+      <!-- Your image here -->
+       <img class="center-img" src="static/labels/cvpr_label_video-p2p_4f.png", width="100%", style="padding-top: 2%;">
+      <img class="center-img" src="static/images/colorful_water_input.gif", width="33.3%">
+      <img class="center-img" src="static/images/colorful_water_ori.gif", width="33.3%">
+      <img class="center-img" src="static/images/colorful_water_MMI.gif", width="33.3%">
+      <img class="center-img" src="static/prompt/colorful_water.png", width="100%">
+    </div>
+    <div class="item">
+      <!-- Your image here -->
+       <img class="center-img" src="static/labels/cvpr_label_video-p2p_4f.png", width="100%", style="padding-top: 2%;">
+      <img class="center-img" src="static/images/red_car_input.gif", width="33.3%">
+      <img class="center-img" src="static/images/red_car_ori.gif", width="33.3%">
+      <img class="center-img" src="static/images/red_car_MMI.gif", width="33.3%">
+      <img class="center-img" src="static/prompt/red_car.png", width="100%">
+    </div>
+    <div class="item">
+      <!-- vid2vid windmill -->
+       <img class="center-img" src="static/labels/cvpr_label_vid2vid-zero_4f.png", width="100%", style="padding-top: 2%;">
+      <img class="center-img" src="static/images/yellow_windmill_input.gif", width="33.3%">
+      <img class="center-img" src="static/images/vid2vid_windmill_ori.gif", width="33.3%">
+      <img class="center-img" src="static/images/vid2vid_windmill_MMI.gif", width="33.3%">
+      <img class="center-img" src="static/prompt/pink_windmill.png", width="100%">
+    </div>    
+    <div class="item">
+      <!-- vid2vid lava -->
+       <img class="center-img" src="static/labels/cvpr_label_vid2vid-zero_4f.png", width="100%", style="padding-top: 2%;">
+      <img class="center-img" src="static/images/clouds_lava_input.gif", width="33.3%">
+      <img class="center-img" src="static/images/vid2vid_lava_ori.gif", width="33.3%">
+      <img class="center-img" src="static/images/vid2vid_lava_MMI.gif", width="33.3%">
+      <img class="center-img" src="static/prompt/cloud_lava.png", width="100%">
+    </div>
+    <div class="item">
+      <!-- FateZero beer -->
+       <img class="center-img" src="static/labels/cvpr_label_fatezero_4f.png", width="100%", style="padding-top: 2%;">
+      <img class="center-img" src="static/images/beer_input.gif", width="33.3%">
+      <img class="center-img" src="static/images/fatezero_beer_ori.gif", width="33.3%">
+      <img class="center-img" src="static/images/fatezero_beer_MMI.gif", width="33.3%">
+      <img class="center-img" src="static/prompt/water_beer.png", width="100%">
+    </div>
+    <div class="item">
+      <!-- FateZero fireman -->
+       <img class="center-img" src="static/labels/cvpr_label_fatezero_4f.png", width="100%", style="padding-top: 2%;">
+      <img class="center-img" src="static/images/fatezero_fire_input.gif", width="33.3%">
+      <img class="center-img" src="static/images/fatezero_fire_ori.gif", width="33.3%">
+      <img class="center-img" src="static/images/fatezero_fire_MMI.gif", width="33.3%">
+      <img class="center-img" src="static/prompt/fire.png", width="100%">
+    </div>
+  </div>
+</div>
+<br>
+<h2 class="subtitle has-text-centered">
+  <span style="color:#FF0000">Red words</span> indicate the prompt that Prompt-to-prompt editing is applied ('replace' or 'refine'), <br>
+  <span style="color:#00B0F0">Blue words</span> indicate the prompt that Attention Flow with Motion Map Injection module is applied.
+</h2>
+</div>
+</section>
+<!-- End image carousel -->
+
+<br>
+<br>  
+<br>
+<br>
+
+<!--    Abstract    -->  
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body has-text-justified">
+      <div class="columns is-centered has-text-centered">
+        <h2 class="title is-3">Abstract</h2>
+      </div>
+      <h2 class="subtitle">
+        Recent text-guided video editing research attempts to expand from image to video based on the text-guided image editing model. 
+        To this end, most researches focus on achieving temporal consistency between frames as a primary challenge in text-guided video editing. 
+        However, despite their efforts, the editability is still limited when there is a prompt indicating motion, such as `flowing'. 
+        In our experiment, we found that this phenomenon was due to the inaccurate attention map of the motion prompt. 
+        In this paper, we suggest the Motion Map Injection (MMI) module to carry out precise video editing by explicitly taking motion into account. 
+        The proposed MMI module employs two methodologies, "Motion Swapping" and "Weighted Sum using Correlation Score", to enhance the attention map using motion information. 
+        Notably, our MMI module is effectively applied to the attention-based text-guided video editing models, providing enhanced editability.
+      </h2>
+    </div>
+  </div>
+</section>
+  
+<!--    Our Contribution    -->  
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body has-text-justified">
+      <div class="columns is-centered has-text-centered">
+        <h2 class="title is-3">Our Contribution</h2>
+      </div>
+      <h2 class="subtitle">
+        Our proposed Motion-to-Attention (M2A) module gives a way to effectively inject motion extracted from video into the attention map of the prompt. 
+        We found that editing a video with the motion extracted from the video improves general editing performance and enables selective editing according to the direction in which the object moves.
+      </h2>
+    </div>
+  </div>
+</section>
+
+<!--    contribution     -->  
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body has-text-justified">
+      <!--
+      <div class="columns is-centered has-text-centered">
+        <h2 class="title is-3">Framework</h2>
+      </div> -->
+      <img class="center-img" src="static/images/CVPR_fig_3.png"/>
+      <h2 class="subtitle">
+        The existing T2V-model failed to estimate an accurate attention map for the motion prompt {Floating}, which resulted in a decrease in editability. 
+        The proposed MMI module enables the enhancement of the attention map, allowing for the accurate estimation of attention maps. 
+        Through this, it becomes possible to enhance editability. 
+        (a) is a comparison figure illustrating the output of Video-P2P for the input video, as well as the output when the MMI module is applied to Video-P2P. 
+        The result was more realistic editing when the MMI module was applied. 
+        (b) briefly explains the method of enhancing the attention map by applying the proposed module to address the limitations that the existing T2V model cannot accurately generate. 
+        Following figure describes our proposed method.
+      </h2>
+    </div>
+  </div>
+</section>  
+  
+<br>
+<br>
+
+  
+  
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body has-text-justified">
+      <div class="columns is-centered has-text-centered">
+        <h2 class="title is-3">Framework</h2>
+      </div>
+      <img class="center-img" src="static/images/fig2.png" />
+      <h2 class="subtitle">
+        Overall framework of this study. 
+        Overall framework. First, the T2V-Model generates an attention map by receiving video and prompts as input. 
+        At the same time, the Motion Map Injection (MMI) module receives the video frame and generates a motion map. 
+        Then motion map is injected into the attention map of the T2V-Model through two methodologies: ``Motion Swapping" and ``Weighted Sum using Correlation Score". 
+        After that, text-to-video editing is performed using the attention map that includes video motion information.
+      </h2>
+    </div>
+  </div>
+</section>
+  
+<br>
+<br>
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body has-text-justified">
+      <div class="columns is-centered has-text-centered">
+        <h2 class="title is-3">Qualitative Results</h2>
+        </div>
+          <h2 class="subtitle">
+              First, we provide results for 8 frames and 24 frames. It is possible to use not only 8 frames, which are commonly used by most video editing models, but also up to 24 frames.
+            </h2>
+    </div>
+  </div>
+
+  <!-- Image carousel -->
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div id="results-carousel" class="carousel results-carousel">
+       <div class="item">
+        <!-- Video-P2P -->
+        <img class="center-img" src="static/labels/cvpr_label_Video-P2P_8f.png", width="100%", style="padding-top: 2%;">
+        <img class="center-img" src="static/videos/8frame/barabaque/inversion.gif", width="33.3%">
+        <img class="center-img" src="static/videos/8frame/barabaque/video-p2p_original.gif", width="33.3%">
+        <img class="center-img" src="static/videos/8frame/barabaque/ours.gif", width="33.3%">
+        <img class="center-img" src="static/prompt/barbaque.png", width="100%">
+      </div>
+      <div class="item">
+        <!-- Video-P2P -->
+        <img class="center-img" src="static/labels/cvpr_label_Video-P2P_8f.png", width="100%", style="padding-top: 2%;">
+        <img class="center-img" src="static/videos/8frame/chimney/inversion.gif", width="33.3%">
+        <img class="center-img" src="static/videos/8frame/chimney/video-p2p_original.gif", width="33.3%">
+        <img class="center-img" src="static/videos/8frame/chimney/ours.gif", width="33.3%">
+        <img class="center-img" src="static/prompt/bubble_chimney.png", width="100%">
+      </div>
+      <div class="item">
+        <!-- Video-P2P -->
+        <img class="center-img" src="static/labels/cvpr_label_Video-P2P_8f.png", width="100%", style="padding-top: 2%;">
+        <img class="center-img" src="static/videos/8frame/cloud_tower/inversion.gif", width="33.3%">
+        <img class="center-img" src="static/videos/8frame/cloud_tower/original.gif", width="33.3%">
+        <img class="center-img" src="static/videos/8frame/cloud_tower/ours.gif", width="33.3%">
+        <img class="center-img" src="static/prompt/cloud_waves.png", width="100%">
+      </div>
+      <div class="item">
+        <!-- Video-P2P -->
+        <img class="center-img" src="static/labels/cvpr_label_Video-P2P_8f.png", width="100%", style="padding-top: 2%;">
+        <img class="center-img" src="static/videos/8frame/water_bubble/inversion.gif", width="33.3%">
+        <img class="center-img" src="static/videos/8frame/water_bubble/original.gif", width="33.3%">
+        <img class="center-img" src="static/videos/8frame/water_bubble/ours.gif", width="33.3%">
+        <img class="center-img" src="static/prompt/bubble_duck.png", width="100%">
+      </div>
+      <div class="item">
+        <!-- Video-P2P -->
+        <img class="center-img" src="static/labels/cvpr_label_Video-P2P_8f.png", width="100%", style="padding-top: 2%;">
+        <img class="center-img" src="static/videos/8frame/fire/inversion.gif", width="33.3%">
+        <img class="center-img" src="static/videos/8frame/fire/original.gif", width="33.3%">
+        <img class="center-img" src="static/videos/8frame/fire/ours.gif", width="33.3%">
+        <img class="center-img" src="static/prompt/fire.png", width="100%">
+      </div>
+      <div class="item">
+        <!-- Video-P2P -->
+        <img class="center-img" src="static/labels/cvpr_label_Video-P2P_8f.png", width="100%", style="padding-top: 2%;">
+        <img class="center-img" src="static/videos/8frame/water_glass/inversion.gif", width="33.3%">
+        <img class="center-img" src="static/videos/8frame/water_glass/original.gif", width="33.3%">
+        <img class="center-img" src="static/videos/8frame/water_glass/ours.gif", width="33.3%">
+        <img class="center-img" src="static/prompt/water_beer.png", width="100%">
+      </div>
+      <div class="item">
+        <!-- Video-P2P -->
+        <img class="center-img" src="static/labels/cvpr_label_Video-P2P_8f.png", width="100%", style="padding-top: 2%;">
+        <img class="center-img" src="static/videos/8frame/windmill/inversion.gif", width="33.3%">
+        <img class="center-img" src="static/videos/8frame/windmill/original.gif", width="33.3%">
+        <img class="center-img" src="static/videos/8frame/windmill/ours.gif", width="33.3%">
+        <img class="center-img" src="static/prompt/pink_windmill.png", width="100%">
+
+    </div>
+  </div>
+</div>
+</div>
+</section>
+<!-- End image carousel -->
+
+  <!-- Image carousel -->
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="container">
+      <div id="results-carousel" class="carousel results-carousel">
+       <div class="item">
+        <!-- Video-P2P -->
+        <img class="center-img" src="static/labels/cvpr_label_video-p2p_24f.png", width="100%", style="padding-top: 2%;">
+        <img class="center-img" src="static/videos/24frame/inversion.gif", width="33.3%", style="padding-top: 2%;">
+        <img class="center-img" src="static/videos/24frame/original.gif", width="33.3%">
+        <img class="center-img" src="static/videos/24frame/video-p2p_ours.gif", width="33.3%">
+        <img class="center-img" src="static/prompt/balloon_smoke.png", width="100%">
+    </div>
+  </div>
+</div>
+</div>
+</section>
+<!-- End image carousel -->
+  
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body has-text-justified">
+      <div class="columns is-centered has-text-centered">
+      </div>
+        <h2 class="subtitle">
+          We coducted extensive exprements on existing T2V models (vid2vid-zero, FateZero) including Video-P2P.
+          Followings are those expermental results.
+        </h2>
+    </div>
+  </div>
+</section>
+
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div id="results-carousel" class="carousel results-carousel">
+       <div class="item">
+          <img class="center-img" src="static/frame_prompt/video-p2p/black_balloon.png" width="100%" >
+         </div>
+       <div class="item">
+          <img class="center-img" src="static/frame_prompt/video-p2p/black_boat.png" width="100%" >
+         </div>
+       <div class="item">
+          <img class="center-img" src="static/frame_prompt/video-p2p/bubble_duck.png" width="100%">
+         </div>
+       <div class="item">
+          <img class="center-img" src="static/frame_prompt/video-p2p/chimeney.png" width="100%">
+         </div>
+       <div class="item">
+          <img class="center-img" src="static/frame_prompt/video-p2p/cloud.png" width="100%">
+         </div>
+       <div class="item">
+          <img class="center-img" src="static/frame_prompt/video-p2p/fire_container.png" width="100%">
+         </div>
+       <div class="item">
+          <img class="center-img" src="static/frame_prompt/video-p2p/lava.png" width="100%" >
+         </div>
+       <div class="item">
+          <img class="center-img" src="static/frame_prompt/video-p2p/light_smoke.png" width="100%" >
+         </div>
+       <div class="item">
+          <img class="center-img" src="static/frame_prompt/video-p2p/seed_bubble.png" width="100%">
+         </div>
+       <div class="item">
+          <img class="center-img" src="static/frame_prompt/video-p2p/spreading_water.png" width="100%" >
+         </div>
+       <div class="item">
+          <img class="center-img" src="static/frame_prompt/fatezero/beer.png" width="100%" >
+         </div>
+       <div class="item">
+          <img class="center-img" src="static/frame_prompt/fatezero/chimney.png" width="100%" >
+         </div>
+       <div class="item">
+          <img class="center-img" src="static/frame_prompt/fatezero/fire.png" width="100%" >
+         </div>
+       <div class="item">
+          <img class="center-img" src="static/frame_prompt/fatezero/lava.png" width="100%" >
+         </div>
+       <div class="item">
+          <img class="center-img" src="static/frame_prompt/vid2vid-zero/beer.png" width="100%" >
+         </div>
+       <div class="item">
+          <img class="center-img" src="static/frame_prompt/vid2vid-zero/cloud.png" width="100%" >
+         </div>
+       <div class="item">
+          <img class="center-img" src="static/frame_prompt/vid2vid-zero/windmill.png" width="100%" >
+         </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End image carousel -->
+
+
+<br>
+<br>
+<br>
+<br>
+  
+
+<!--    Direction application     -->  
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body has-text-justified">
+      <div class="columns is-centered has-text-centered">
+        <h2 class="title is-3">Application</h2>
+      </div>
+      <img class="center-img" src="static/images/f_pink_train.png"/>
+      <h2 class="subtitle">
+        Since optical flow has the information on direction of pixel movement, as well as magnitude, 
+        our model can be applied to allow the user to edit contents in a specific direction by rotating the optical flow 
+        according to the direction provided by the user before injecting it.
+      </h2>
+    </div>
+  </div>
+</section>  
+
+<br>
+<br>
+<br>
+<br>
+
+<!--    Ablation Study    -->
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body has-text-justified">
+      <div class="columns is-centered has-text-centered">
+        <h2 class="title is-3">Ablation Study</h2>
+      </div>
+      <br>
+      <figure>
+        <img src="static/supple_template_4.jpg" width="100%">
+      </figure>
+      <br>
+
+      <h2 class="subtitle">
+        In ablation study, correlation-based normalized methods (Normalized Cross Correlation, Normalized Cross Coefficient) outperform other metrics including Spectral angle Mapper. 
+        In some case, both the Structural Similarity Index and Mutual Information shows novel results that were not observed within other template matching methods. 
+        Through this results, it is important to choose the template matching metrics well.
+      </h2>
+    </div>
+  </div>
+</section>
+
+
+<br>
+<br>
+<br>
+<br>
+
+<!--    Followup Works    -->  
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body has-text-justified">
+      <div class="columns is-centered has-text-centered">
+        <h2 class="title is-3">Followup Works</h2>
+      </div>
+      <h2 class="subtitle">
+        We used <a href="https://video-p2p.github.io/">Video-P2P: Video Editing with Cross-attention Control</a> model as base-model which is based on Text-to-Image diffusion.
+        And we expanded experments to show that our module is generally suitable for other T2V models, 
+        <a href="https://github.com/baaivision/vid2vid-zero">vid2vid</a> and <a href="https://fate-zero-edit.github.io/">FateZero</a>.
+        <br> 
+        <br> 
+        Our another paper on this subject, <b>'Enhancing Text-to-Video Editing with Motion Map Injection'</b> (not published) has been selected for <b>oral presentation in ICCV workshop (CVEU 2023)!</b>
+      </h2>
+    </div>
+  </div>
+</section>
+
+<br> 
+<br> 
+
+
+<!--    BibTex    -->  
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body has-text-justified">
+      <div class="columns is-centered has-text-centered">
+        <h2 class="title is-3">BibTex</h2>
+      </div>
+      <h2 class="subtitle">
+        @article{2023attentionflow,<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;title={AttentionFlow: Text-to-Video Editing Using Motion Map Injection Module},<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;year={2023}<br>
+          }
+      </h2>
+    </div>
+  </div>
+</section>
+
+
+  </body>
+  </html>
