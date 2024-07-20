@@ -1,312 +1,300 @@
 <!DOCTYPE html>
-<html>
+
 <head>
-  <meta charset="utf-8">
-  <!-- Meta tags for social media banners, these should be filled in appropriatly as they are your "business card" -->
-  <!-- Replace the content tag with appropriate information -->
-  <meta name="description" content="DESCRIPTION META TAG">
-  <meta property="og:title" content="SOCIAL MEDIA TITLE TAG"/>
-  <meta property="og:description" content="SOCIAL MEDIA DESCRIPTION TAG TAG"/>
-  <meta property="og:url" content="URL OF THE WEBSITE"/>
-  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X630-->
-  <meta property="og:image" content="static/image/your_banner_image.png" />
-  <meta property="og:image:width" content="1200"/>
-  <meta property="og:image:height" content="630"/>
-
-
-  <meta name="twitter:title" content="TWITTER BANNER TITLE META TAG">
-  <meta name="twitter:description" content="TWITTER BANNER DESCRIPTION META TAG">
-  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X600-->
-  <meta name="twitter:image" content="static/images/your_twitter_banner_image.png">
-  <meta name="twitter:card" content="summary_large_image">
-  <!-- Keywords for your paper to be indexed by-->
-  <meta name="keywords" content="KEYWORDS SHOULD BE PLACED HERE">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-
-
-  <title>Academic Project Page</title>
-  <link rel="icon" type="image/x-icon" href="static/images/favicon.ico">
-  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
-  rel="stylesheet">
-
-  <link rel="stylesheet" href="static/css/bulma.min.css">
-  <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
-  <link rel="stylesheet" href="static/css/bulma-slider.min.css">
-  <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
-  <link rel="stylesheet"
-  href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
-  <link rel="stylesheet" href="static/css/index.css">
-
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
-  <script defer src="static/js/fontawesome.all.min.js"></script>
-  <script src="static/js/bulma-carousel.min.js"></script>
-  <script src="static/js/bulma-slider.min.js"></script>
-  <script src="static/js/index.js"></script>
+<meta charset="utf-8" />
+<title></title>
+    
 </head>
-<body>
+<body><style type="text/css">
+	* {
+		margin: 0;
+		padding: 0;
+	}
+    ul li{
+        list-style: none;
+    }
+    a {
+        text-decoration: none;
+        color:#333;
+    }
+    #menu {
+        font:bold 16px "malgun gothic";
+        width:450px;
+        height:50px;
+        background: #e0dddd;
+        color:black;
+        line-height: 50px; 
+        margin:0 auto;
+        text-align: center;
+    }
 
-
-  <section class="hero">
-    <div class="hero-body">
-      <div class="container is-max-desktop">
-        <div class="columns is-centered">
-          <div class="column has-text-centered">
-            <h1 class="title is-1 publication-title">Academic Project Page</h1>
-            <div class="is-size-5 publication-authors">
-              <!-- Paper authors -->
-              <span class="author-block">
-                <a href="FIRST AUTHOR PERSONAL LINK" target="_blank">First Author</a><sup>*</sup>,</span>
-                <span class="author-block">
-                  <a href="SECOND AUTHOR PERSONAL LINK" target="_blank">Second Author</a><sup>*</sup>,</span>
-                  <span class="author-block">
-                    <a href="THIRD AUTHOR PERSONAL LINK" target="_blank">Third Author</a>
-                  </span>
-                  </div>
-
-                  <div class="is-size-5 publication-authors">
-                    <span class="author-block">Institution Name<br>Conferance name and year</span>
-                    <span class="eql-cntrb"><small><br><sup>*</sup>Indicates Equal Contribution</small></span>
-                  </div>
-
-                  <div class="column has-text-centered">
-                    <div class="publication-links">
-                         <!-- Arxiv PDF link -->
-                      <span class="link-block">
-                        <a href="https://arxiv.org/pdf/<ARXIV PAPER ID>.pdf" target="_blank"
-                        class="external-link button is-normal is-rounded is-dark">
-                        <span class="icon">
-                          <i class="fas fa-file-pdf"></i>
-                        </span>
-                        <span>Paper</span>
-                      </a>
-                    </span>
-
-                    <!-- Supplementary PDF link -->
-                    <span class="link-block">
-                      <a href="static/pdfs/supplementary_material.pdf" target="_blank"
-                      class="external-link button is-normal is-rounded is-dark">
-                      <span class="icon">
-                        <i class="fas fa-file-pdf"></i>
-                      </span>
-                      <span>Supplementary</span>
-                    </a>
-                  </span>
-
-                  <!-- Github link -->
-                  <span class="link-block">
-                    <a href="https://github.com/YOUR REPO HERE" target="_blank"
-                    class="external-link button is-normal is-rounded is-dark">
-                    <span class="icon">
-                      <i class="fab fa-github"></i>
-                    </span>
-                    <span>Code</span>
-                  </a>
-                </span>
-
-                <!-- ArXiv abstract Link -->
-                <span class="link-block">
-                  <a href="https://arxiv.org/abs/<ARXIV PAPER ID>" target="_blank"
-                  class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                    <i class="ai ai-arxiv"></i>
-                  </span>
-                  <span>arXiv</span>
-                </a>
-              </span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-
-<!-- Teaser video-->
-<section class="hero teaser">
-  <div class="container is-max-desktop">
-    <div class="hero-body">
-      <video poster="" id="tree" autoplay controls muted loop height="100%">
-        <!-- Your video here -->
-        <source src="static/videos/banner_video.mp4"
-        type="video/mp4">
-      </video>
-      <h2 class="subtitle has-text-centered">
-        Aliquam vitae elit ullamcorper tellus egestas pellentesque. Ut lacus tellus, maximus vel lectus at, placerat pretium mi. Maecenas dignissim tincidunt vestibulum. Sed consequat hendrerit nisl ut maximus. 
-      </h2>
-    </div>
-  </div>
-</section>
-<!-- End teaser video -->
-
-<!-- Paper abstract -->
-<section class="section hero is-light">
-  <div class="container is-max-desktop">
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
-        <h2 class="title is-3">Abstract</h2>
-        <div class="content has-text-justified">
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ullamcorper tellus sed ante aliquam tempus. Etiam porttitor urna feugiat nibh elementum, et tempor dolor mattis. Donec accumsan enim augue, a vulputate nisi sodales sit amet. Proin bibendum ex eget mauris cursus euismod nec et nibh. Maecenas ac gravida ante, nec cursus dui. Vivamus purus nibh, placerat ac purus eget, sagittis vestibulum metus. Sed vestibulum bibendum lectus gravida commodo. Pellentesque auctor leo vitae sagittis suscipit.
-          </p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-<!-- End paper abstract -->
-
-
-<!-- Image carousel -->
-<section class="hero is-small">
-  <div class="hero-body">
-    <div class="container">
-      <div id="results-carousel" class="carousel results-carousel">
-       <div class="item">
-        <!-- Your image here -->
-        <img src="static/images/carousel1.jpg" alt="MY ALT TEXT"/>
-        <h2 class="subtitle has-text-centered">
-          First image description.
-        </h2>
-      </div>
-      <div class="item">
-        <!-- Your image here -->
-        <img src="static/images/carousel2.jpg" alt="MY ALT TEXT"/>
-        <h2 class="subtitle has-text-centered">
-          Second image description.
-        </h2>
-      </div>
-      <div class="item">
-        <!-- Your image here -->
-        <img src="static/images/carousel3.jpg" alt="MY ALT TEXT"/>
-        <h2 class="subtitle has-text-centered">
-         Third image description.
-       </h2>
-     </div>
-     <div class="item">
-      <!-- Your image here -->
-      <img src="static/images/carousel4.jpg" alt="MY ALT TEXT"/>
-      <h2 class="subtitle has-text-centered">
-        Fourth image description.
-      </h2>
-    </div>
-  </div>
+    #menu > ul > li {
+        float:left;
+        width:140px;
+        position:relative;
+    }
+    #menu > ul > li > ul {
+    width:130px;
+    display:none;
+    position: absolute;
+    font-size:14px;
+    background: rgb(229, 243, 248);
+    }
+    #menu > ul > li:hover > ul {
+        display:block;
+    }
+    </style>
+<div id="menu">
+	<ul>
+		<li><a href="#">3D-MOM</a>
+			<ul>
+				<li><a href="#Abstract">Abstract</a></li>
+				<li><a href="#method">Method</a></li>
+			</ul>
+		</li>
+		<li><a href="#">Qualitative Result</a>
+			<ul>
+				<li><a href="#Quantitative_results_1">Paper Result 1</a></li>
+				<li><a href="#Quantitative_results_2">Paper Result 2</a></li>
+			</ul>
+		</li>
+		<li><a href="#">Visualization</a>
+			<ul>
+				<li><a href="#Visualization Results">Paper Results</a></li>
+				<li><a href="#add_Visualization Results">Ablation Study</a></li>
+				<li><a href="#GUI_tutorial">GUI & Tutorial & Demo</a></li>
+			</ul>
+		</li>
+	</ul>
 </div>
-</div>
-</section>
-<!-- End image carousel -->
-
-
-
-
-<!-- Youtube video -->
-<section class="hero is-small is-light">
-  <div class="hero-body">
-    <div class="container">
-      <!-- Paper video. -->
-      <h2 class="title is-3">Video Presentation</h2>
-      <div class="columns is-centered has-text-centered">
-        <div class="column is-four-fifths">
-          
-          <div class="publication-video">
-            <!-- Youtube embed code here -->
-            <iframe src="https://www.youtube.com/embed/JkaxUblCGz0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-<!-- End youtube video -->
-
-
-<!-- Video carousel -->
-<section class="hero is-small">
-  <div class="hero-body">
-    <div class="container">
-      <h2 class="title is-3">Another Carousel</h2>
-      <div id="results-carousel" class="carousel results-carousel">
-        <div class="item item-video1">
-          <video poster="" id="video1" autoplay controls muted loop height="100%">
-            <!-- Your video file here -->
-            <source src="static/videos/carousel1.mp4"
-            type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-video2">
-          <video poster="" id="video2" autoplay controls muted loop height="100%">
-            <!-- Your video file here -->
-            <source src="static/videos/carousel2.mp4"
-            type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-video3">
-          <video poster="" id="video3" autoplay controls muted loop height="100%">\
-            <!-- Your video file here -->
-            <source src="static/videos/carousel3.mp4"
-            type="video/mp4">
-          </video>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-<!-- End video carousel -->
-
-
-
-
-
-
-<!-- Paper poster -->
-<section class="hero is-small is-light">
-  <div class="hero-body">
-    <div class="container">
-      <h2 class="title">Poster</h2>
-
-      <iframe  src="static/pdfs/sample.pdf" width="100%" height="550">
-          </iframe>
+<br/>
+    <div style="border: 2px solid rgb(209, 206, 206); border-radius: 15px; padding: 10px;width:1100px; margin:auto;box-shadow: 1px 1px 2px 6px rgb(209, 206, 206)">
+        <br/>
+    <h1><p style="font-size:1.3em;text-align:center; font-family: 'Times New Roman'">Optimizing 4D Gaussians for Dynamic Scene Video from Single Landscape Images</p></h1>
+    <br/>
+    <h2><p style="color:gray;font-size:0.9em;text-align:center; font-family: 'Times New Roman'">In-hwan Jin*, Haesoo Choo*, Seong-Hun Jeong, Junghwan Kim, Heemoon Park, Oh-joon Kwon, and Kyeongbo Kong</p></h2>
+    <br/>
+    <h2><p style="color:gray;font-size:0.7em;text-align:center; font-family: 'Times New Roman';font-weight: normal;">Pukyong National University, Pusan National University</p></h2>
+    <br/>
+    <div style="border: 2px solid white; border-radius: 15px; padding: 10px;width:1100px; margin:auto"></div>
+    <!--
+    <center>
+        <a href="Person-in-Place_8271.pdf">
+            <img src="pdf_img.png" width="40" alt="Main Paper"></a>
+            &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+            <a href="https://anonymous.4open.science/r/Person-in-Place-4FF0">
+                <img src="github_img.png" width="50" alt="Main Code"></a>
         
-      </div>
+    </center>
+    -->
+    
+
+    <br/>
+    <center>
+    <img src="CVPR_2024_jpg/our_results_total_v6.jpg" alt="My Image" width="1000">
+    <h3><p style="font-size:0.9em;text-align:center; font-family: 'Times New Roman';font-weight: normal;">
+        <strong>Human-object interaction (HOI) image editing using generated skeleton:</strong>
+        We synthesize human interacting with objects for an initial image using the automated object-interactive diffuser. 
+        <strong>(a)</strong> an initial image to edit. <strong>(b)</strong> the sequential process of synthesizing human image with object-interactive skeletons using textual conditions. 
+        <strong>(c)</strong> a final result image with the skeleton map. Our method generates the high quality object interactive skeleton map, 
+        and it can easily plug in to the skeleton guided generative model for HOI image editing.
+        <br/>
+        <br/>
+    </p></h3>
+    <br/><p id="GUI_tutorial">
     </div>
-  </section>
-<!--End paper poster -->
-
-
-<!--BibTex citation -->
-  <section class="section" id="BibTeX">
-    <div class="container is-max-desktop content">
-      <h2 class="title">BibTeX</h2>
-      <pre><code>BibTex Code Here</code></pre>
+    <br/>
+    <div style="border: 2px solid rgb(209, 206, 206); border-radius: 15px; padding: 10px;width:1100px; margin:auto;box-shadow: 1px 1px 2px 6px rgb(209, 206, 206)">
+        <br/>
+    <h2><p style="font-size:1.3em;text-align:center; font-family: 'Times New Roman';font-weight: normal;">Our GUI & Demo & Tutorial Code !</h1>
+        <br/>
+    <div style="border: 2px solid white; border-radius: 15px; width:1000px; margin:auto;height: 200;">
+    <h3><p style="color:black;font-size:0.9em; font-family: 'Times New Roman';font-weight: normal;">
+    
+        <center><img src="CVPR_2024_jpg/GUI.gif" alt="My Image" width="500"><img src="CVPR_2024_jpg/GUI_1.gif" alt="My Image" width="500"></center>
+        <center><img src="CVPR_2024_jpg/output.gif" alt="My Image" width="500"><img src="CVPR_2024_jpg/output1.gif" alt="My Image" width="500"></center>
+        <center><img src="CVPR_2024_jpg/output2.gif" alt="My Image" width="500"><img src="CVPR_2024_jpg/output3.gif" alt="My Image" width="500"></center>
+    
+        We plan to provide a User-Friendly Object Interactive Skeleton Generator & GUI for Human-Object-Interaction (HOI) image editing, along with tutorials and demo code for user convenience.
+    </p></h3>
     </div>
-</section>
-<!--End BibTex citation -->
-
-
-  <footer class="footer">
-  <div class="container">
-    <div class="columns is-centered">
-      <div class="column is-8">
-        <div class="content">
-
-          <p>
-            This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a> which was adopted from the <a href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.
-            You are free to borrow the of this website, we just ask that you link back to this page in the footer. <br> This website is licensed under a <a rel="license"  href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative
-            Commons Attribution-ShareAlike 4.0 International License</a>.
-          </p>
-
-        </div>
-      </div>
     </div>
-  </div>
-</footer>
+    <br/>
+    <div style="border: 2px solid rgb(209, 206, 206); border-radius: 15px; padding: 10px;width:1100px; margin:auto;box-shadow: 1px 1px 2px 6px rgb(209, 206, 206)">
+        <br/>
+    <h2><p style="font-size:1.3em;text-align:center; font-family: 'Times New Roman';font-weight: normal;">Human-Object-Interaction Image Editing</h1>
+        <br/>
+    <div style="border: 2px solid white; border-radius: 15px; width:1000px; margin:auto;height: 200;">
+    <h3><p style="color:black;font-size:0.9em; font-family: 'Times New Roman';font-weight: normal;">Traditional image editing technologies have seen significant advancements, 
+        but they face limitations in the realm of Human-Object-Interaction (HOI) image editing. 
+        However, recent developments introduce technologies utilizing Skeleton-guidance maps (e.g., ControlNet, HumanSD, UNI-contronet, T2I-Adapter, etc.) to generate or edit images, 
+        seamlessly performing HOI image editing. Nevertheless, there is currently no existing technology for generating or editing Object interactive Skeletons, 
+        and we propose this for the first time.</p></h3>
+        <br/><p id="Abstract">
+    </div>
+    </div>
+    <br/>
+    <div style="border: 2px solid rgb(209, 206, 206); border-radius: 15px; padding: 10px;width:1100px; margin:auto;box-shadow: 1px 1px 2px 6px rgb(209, 206, 206)">
+        <br/>
+    <h2><p style="font-size:1.3em;text-align:center; font-family: 'Times New Roman';font-weight: normal;">Abstract</p></h2>
+    <br/>
+    <div style="border: 2px solid white; border-radius: 15px; width:1000px; margin:auto;height: 200;">
+    <h3><p style="color:black;font-size:0.9em; font-family: 'Times New Roman';font-weight: normal;">Recently, there were remarkable advances in image editing tasks in various ways. 
+        Nevertheless, existing image editing models are not designed for Human-Object Interaction (HOI) image editing. 
+        One of these approaches (e.g. ControlNet)  employs the skeleton guidance to offer precise representations of human, showing better results in HOI image editing. 
+        However, using conventional methods, manually creating HOI skeleton guidance is necessary. 
+        This paper proposes the object interactive diffuser with associative attention that considers both the interaction with objects and the joint graph structure, 
+        automating the generation of HOI skeleton guidance. Additionally, we propose the HOI loss with novel scaling parameter, demonstrating its effectiveness in generating skeletons that interact better. 
+        To evaluate generated object-interactive skeletons, we propose two metrics, top-N accuracy and skeleton probabilistic distance. 
+        Our framework integrates object interactive diffuser that generates object-interactive skeletons with previous methods, demonstrating the outstanding results in HOI image editing. 
+        Finally, we present potentials of our framework beyond HOI image editing, as applications to human-to-human interaction, skeleton editing, and 3D mesh optimization.</p></h3>
+        <br/><p id="method">
+    </div>
+    </div>
+    <br/>
+    <div style="border: 2px solid rgb(209, 206, 206); border-radius: 15px; padding: 10px;width:1100px; margin:auto;box-shadow: 1px 1px 2px 6px rgb(209, 206, 206)">
+    <div style="border: 2px solid white; border-radius: 15px; width:1000px; margin:auto;height: 200;">
+        <br/>
+    <h2><p style="font-size:1.3em; font-family: 'Times New Roman';font-weight: normal;">Person-in-Place Framework</p></h2>
+    <br/>
+    <h3><p style="color:black;font-size:0.9em; font-family: 'Times New Roman';font-weight: normal;">
+        <strong>Overview of proposed framework</strong>: Our proposed framework uses a cropped image from a person bounding box as an input and the object bounding box. 
+        <strong>(Left)</strong> These are used to extract a image and an object features.
+            <strong>(Middle)</strong> The extracted features are used as a image and object conditioning respectively in our object interactive diffuser. 
+            Using these conditionings, the object interactive diffuser comes to see the object-joint and joint-joint relationships then generate a denoised skeleton based on diffusion process. 
+            (<strong>Right</strong>) The synthesized skeleton together with a masked image using a person bounding box is used to edit image with off the shelf inpainting model.
+    </p></h3>
+    
+        <br/>
+        <img src="CVPR_2024_jpg/main_framework_v1.jpg" alt="My Image" width="1000">
+        <br/>
+    <h3><p style="color:black;font-size:0.9em; font-family: 'Times New Roman';font-weight: normal;">
+        The denoise process first estimate the correlation between the object and the joints, and then it considers the relationship between the joint themselves using a GNN. 
+        After that, the object conditioning is used to predict which joints are most likely to interact with the object. 
+        In this figure, the pixels located inside the snowboard have higher attention score on joints such as hands or foot than others.
+        
+        This figure visualizes which joint has the greatest association with features correspond to selected pixels in the image colored red, yellow and orange. 
+        The size of the circle indicates the degree of association.
+    
+    </p></h3>
+        <center><img src="CVPR_2024_jpg/main_module_V4.jpg" alt="My Image" width="500"><img src="CVPR_2024_jpg/skeleton_attention.jpg" alt="My Image" width="500"></center>
+        <h3><p style="color:black;font-size:0.9em; font-family: 'Times New Roman';font-weight: normal;">
+        
+        </p></h3>
+            <br/>
 
-<!-- Statcounter tracking code -->
-  
-<!-- You can add a tracker to track page visits by creating an account at statcounter.com -->
 
-    <!-- End of Statcounter Code -->
+    <br/><p id="Quantitative_results_1"></p>
+    </div>
+    </div>
 
-  </body>
-  </html>
+
+    <br/>
+    <div style="border: 2px solid rgb(209, 206, 206); border-radius: 15px; padding: 10px;width:1100px; margin:auto;box-shadow: 1px 1px 2px 6px rgb(209, 206, 206)">
+
+        <br/>
+        <div style="border: 2px solid white; border-radius: 15px; width:1000px; margin:auto;height: 200;">
+    <h2><p style="font-size:1.3em; font-family: 'Times New Roman';font-weight: normal;">Quantitative HOI image editing Results</p></h2>
+    <br/>
+    
+        <h3><p style="color:black;font-size:0.9em; font-family: 'Times New Roman';font-weight: normal;">
+            <strong>results comparing our framework to the previous image editing model: </strong>
+            Our framework outperforms others on the metrics indicating image quality FID, 
+            KID and metric measuring prompt alignment to image CS. 
+            Two approaches exist in the realm of editing models: Text-Free editing models and Text-Guided editing models. 
+            We belong to the Text-Guided editing model category, and our performance analysis indicates that utilizing our Object Interactive Skeleton for inpainting yields the best results. 
+            Moreover, our approach demonstrates superior performance compared to the upgraded version of the Stable Diffusion-based method, SDXL-inpainting
+            <br/>
+        <br/>
+        <center><img src="CVPR_2024_jpg/result_qunti.jpg" alt="My Image" width="500"></center>
+
+
+        <br/><p id="Quantitative_results_2"></p>
+    </div>
+    </div>
+
+
+    <br/>
+    <div style="border: 2px solid rgb(209, 206, 206); border-radius: 15px; padding: 10px;width:1100px; margin:auto;box-shadow: 1px 1px 2px 6px rgb(209, 206, 206)">
+
+        <br/>
+        <div style="border: 2px solid white; border-radius: 15px; width:1000px; margin:auto;height: 200;">
+    <h2><p style="font-size:1.3em; font-family: 'Times New Roman';font-weight: normal;">Quantitative Object Interactive Skeleton Results</p></h2>
+    <br/>
+    Table 2 provides a comparison of results for the proposed loss scale. 
+    Applying our loss scale shows improvement in object interactive skeleton evaluation performance across all models. 
+    Additionally, Table 3 presents a performance comparison of the proposed Associative Attention mechanism. 
+    It is evident that our method significantly outperforms modules such as conventional attention or attention + GNN (Graph Neural Network).
+        <h3><p style="color:black;font-size:0.9em; font-family: 'Times New Roman';font-weight: normal;">
+            <br/>
+        <br/>
+        <center><img src="CVPR_2024_jpg/result_qunti_v1.jpg" alt="My Image" width="500"><img src="CVPR_2024_jpg/result_qunti_v2.jpg" alt="My Image" width="500"></center>
+
+<br/><p id="Visualization Results"></p>
+    <br/>
+    </div>
+    </div>
+
+    <br/>
+    <div style="border: 2px solid rgb(209, 206, 206); border-radius: 15px; padding: 10px;width:1100px; margin:auto;box-shadow: 1px 1px 2px 6px rgb(209, 206, 206)">
+        <br/>
+        <div style="border: 2px solid white; border-radius: 15px; width:1000px; margin:auto;height: 200;">
+    <h2><p style="font-size:1.3em; font-family: 'Times New Roman';font-weight: normal;">Visualization Results</p></h2>
+    <br/>
+    <img src="CVPR_2024_jpg/main_results_v1.jpg" alt="My Image" width="1000">
+    
+    <br/>
+    <h3><p style="color:black;font-size:0.9em; font-family: 'Times New Roman';font-weight: normal;">
+        <strong>(Top)</strong>: Qualitative results when generating a single person using CoModGAN, 
+        Instruct-Pix2Pix, Stable-Diffusion Inpainting (SD-Inpainting). 
+        <strong>(Top left)</strong> Incomplete or no humans are generated using other models. 
+        <strong>(Top right)</strong> Even though humans are generated, the misaligned or non-interactive humans are synthesized. 
+        <strong>(Bottom)</strong> : Demonstration of image editing with SD-inpainting, SDXL-inpainting and ours. 
+        Other models did not generate a human even using a guided skeleton.        
+    <br/>
+
+    <br/><p id="add_Visualization Results"></p>
+    <br/>
+    </div>
+    </div>
+
+    <br/>
+    <div style="border: 2px solid rgb(209, 206, 206); border-radius: 15px; padding: 10px;width:1100px; margin:auto;box-shadow: 1px 1px 2px 6px rgb(209, 206, 206)">
+        <br/>
+        <div style="border: 2px solid white; border-radius: 15px; width:1000px; margin:auto;height: 200;">
+    <h2><p style="font-size:1.3em; font-family: 'Times New Roman';font-weight: normal;">Additional Visualization Results</p></h2>
+    <br/>
+    <img src="CVPR_2024_jpg/result_skt.jpg" alt="My Image" width="1000">
+    
+    <br/>
+    <h3><p style="color:black;font-size:0.9em; font-family: 'Times New Roman';font-weight: normal;">
+        <strong>Comparison between attention mechanism and associative attention mechanism:</strong> 
+        By employing our associative attention mechanism, the overall shape of skeleton becomes more natural as shown in images of a baby sitting on the bed or a man sitting on the yacht. 
+        Moreover, our associative attention mechanism generates more object-interactive poses, 
+        e.g. swinging, sitting, typing, as joints of the skeleton approach the object through propagation process. 
+        Moreover, even in scenarios with multiple objects, a natural skeleton is generated while interacting with the specified object.  
+        
+    <br/>
+    <img src="CVPR_2024_jpg/test_input_supp_2.jpg" alt="My Image" width="1000">
+    <img src="CVPR_2024_jpg/test_input_supp_3.jpg" alt="My Image" width="1000">
+    <br/>
+    <h3><p style="color:black;font-size:0.9em; font-family: 'Times New Roman';font-weight: normal;">
+        <strong>Comparion of CoModGAN, Instruct-Pix2Pix, SD-Inpainting and Ours:</strong>
+        We use a person bounding box, an object bounding box and a text prompt for HOI image editing. 
+        In most cases of the visualization results, CoModGAN and Instruct-Pix2Pix perform poorly in generating natural humans. 
+        Our results exhibit more object-interactive images than SD-Inpainting, as shown in cases of a woman with wearing a polka-dotted umbrella or a man surfing with the waves. 
+        For an example, in the case of 'A woman in pajamas using her laptop on the stove top in the kitchen', 
+        CoModGAN and SD-Inpainting did not generate even a human shape. Instruct-Pix2Pix failed to maintain the original image, 
+        while our method generated a natural woman that matches the text prompt.
+        <img src="CVPR_2024_jpg/test_input_supp_5.jpg" alt="My Image" width="1000">
+        <img src="CVPR_2024_jpg/test_input_supp_6.jpg" alt="My Image" width="1000">
+        <br/>
+    <h3><p style="color:black;font-size:0.9em; font-family: 'Times New Roman';font-weight: normal;">
+        <strong>Performing on multi-people images:</strong> 
+        This figure shows HOI-edited images of multiple people using SD-Inpainting, SDXL-Inpainting and Ours. 
+        In the first and second column, SD-Inpainting and SDXL-Inpainting fail to generate a human when a person bounding box is provided in a small size. 
+        On the other hand, our method generates natural HOI images regardless of a size of a person bounding box, 
+        since it utilizes object-interactive skeletons. As shown in the fourth column, 
+        people sitting on the sofa and children sitting on the sofa are generated naturally with our method.
+</body>
+</html>
