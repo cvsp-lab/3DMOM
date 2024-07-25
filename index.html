@@ -70,16 +70,26 @@
 <br/>
     <div style="border: 2px solid rgb(209, 206, 206); border-radius: 15px; padding: 10px;width:1100px; margin:auto;box-shadow: 1px 1px 2px 6px rgb(209, 206, 206)">
         <br/>
-    <h1><p style="font-size:1.3em;text-align:center; font-family: 'Times New Roman'">Optimizing 4D Gaussians for Dynamic Scene Video from Single Landscape Images</p></h1><p>From</p>
+    <h1><p style="font-size:1.3em;text-align:center; font-family: 'Times New Roman'">Optimizing 4D Gaussians for Dynamic Scene Video from Single Landscape Images</p></h1>
     <br/>
-    <h2><p style="color:blue;font-size:0.9em;text-align:center; font-family: 'Times New Roman'">In-hwan Jin*, Haesoo Choo*, Seong-Hun Jeong, Junghwan Kim, Heemoon Park, Oh-joon Kwon, and Kyeongbo Kong</p></h2>
+    <h2><p style="color:gray;font-size:0.9em;text-align:center; font-family: 'Times New Roman'">In-hwan Jin*, Haesoo Choo*, Seong-Hun Jeong, Junghwan Kim, Heemoon Park, Oh-joon Kwon, and Kyeongbo Kong</p></h2>
     <br/>
     <h2><p style="color:gray;font-size:0.5em;text-align:center; font-family: 'Times New Roman'">The symbol * signifies equal contribution.</p></h2>
     <br/>
-    <h2><p style="color:gray;font-size:0.7em;text-align:center; font-family: 'Times New Roman';font-weight: normal;">Pukyong National University, Pusan National University, DMStudio Co. </p></h2>
+    <h2><p style="color:gray;font-size:0.7em;text-align:center; font-family: 'Times New Roman';font-weight: normal;">Pukyong National University, Pusan National University, DMstudio co.</p></h2>
     <br/>
     <div style="border: 2px solid white; border-radius: 15px; padding: 10px;width:1100px; margin:auto"></div>
+    <!--
+    <center>
+        <a href="Person-in-Place_8271.pdf">
+            <img src="pdf_img.png" width="40" alt="Main Paper"></a>
+            &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+            <a href="https://anonymous.4open.science/r/Person-in-Place-4FF0">
+                <img src="github_img.png" width="50" alt="Main Code"></a>
         
+    </center>
+    -->
+    
 
     <br/>
     <center>
@@ -103,8 +113,7 @@
 	    which creates videos with natural animations from specific camera perspectives using a combination of single image animation and 3D photography. 
 	    These methods utilize Layered Depth Images (LDIs), which are created by dividing a single image into multiple layers based on depth, to represent a pseudo 3D space. 
 	    However, there are limitations when attempting to discretely separate most elements, including fluids, in a continuous landscape, and 3D space cannot be fully represented this way.
-	    Therefore, achieving complete 4D space virtualization through explicit representation is necessary, and we propose this approach for the first time.
-        </p></h3>
+	    Therefore, achieving complete 4D space virtualization through explicit representation is necessary, and we propose this approach for the first time.</p></h3>
         <br/><p id="Abstract">
     </div>
     </div>
@@ -138,18 +147,16 @@
     <br/>
     <h3><p style="color:black;font-size:0.9em; font-family: 'Times New Roman';font-weight: normal;">
         <strong>The overview of our pipeline.</strong>: Our goal is to optimize 4D Gaussians to represent a complete 3D space, including animation, from a single image.
-	    (a) A depth map is estimated from the given single image, and it is converted into a point cloud. 
+	    <strong>(a)</strong> A depth map is estimated from the given single image, and it is converted into a point cloud. 
 	    For optimizing the 3D Gaussians, multi-view RGB images are rendered according to the defined camera trajectory. 
-	    (b) Similarly, multi-view motion masks are rendered for the input motion mask. 
+	    <strong>(b)</strong> Similarly, multi-view motion masks are rendered for the input motion mask. 
 	    These are utilized to estimate multi-view 2D motion maps along with the rendered RGB images. 
 	    3D motion is obtained by unprojecting the estimated 2D motion into the 3D domain. 
 	    In this context, the proposed <strong>3D Motion Optimization Module (3D-MOM)</strong> ensures consistent 3D motion across multi-views. 
-	    (c) Using the optimized 3D Gaussians and generated 3D motion, 4D Gaussians are optimized for changes in position, rotation, and scaling over time.</p></h3>
+	    <strong>(c)</strong> Using the optimized 3D Gaussians and generated 3D motion, 4D Gaussians are optimized for changes in position, rotation, and scaling over time.</p></h3>
         <br/>
         <img src="static/images/NeurIPS_fig_1.png" alt="My Image" width="1000">
         <br/>
-    </div>
-    </div>
     <h3><p style="color:black;font-size:0.9em; font-family: 'Times New Roman';font-weight: normal;">
 	    3D Motion Optimization Module. To maintain consistency of motion across multi-views, 3D motion is defined from the point cloud and projected into 2D images using camera parameters. 
 	    The L1 loss between the projected motion and the estimated motion map as the ground truth is computed, minimizing the sum of losses for multi-view to optimize the 3D motion.
