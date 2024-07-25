@@ -1,11 +1,7 @@
 <!DOCTYPE html>
-
 <head>
     <meta charset="utf-8" />
-    <title></title>
-</head>
-
-<body>
+    <title>Video Slideshow</title>
     <style type="text/css">
         * {
             margin: 0;
@@ -50,31 +46,52 @@
             display: block;
         }
 
-        .video-container {
-            display: flex;
-            overflow-x: auto;
-            white-space: nowrap;
+        .slideshow-container {
+            position: relative;
+            max-width: 1000px;
+            margin: auto;
             border: 2px solid rgb(209, 206, 206);
             border-radius: 15px;
             padding: 10px;
-            width: 1100px;
-            margin: auto;
             box-shadow: 1px 1px 2px 6px rgb(209, 206, 206);
         }
 
-        .video-container video {
-            margin-right: 10px;
+        .video-slide {
+            display: none;
         }
 
-        .video-container::-webkit-scrollbar {
-            height: 10px;
+        .prev, .next {
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            width: auto;
+            margin-top: -22px;
+            padding: 16px;
+            color: white;
+            font-weight: bold;
+            font-size: 18px;
+            transition: 0.6s ease;
+            border-radius: 0 3px 3px 0;
+            user-select: none;
         }
 
-        .video-container::-webkit-scrollbar-thumb {
-            background: rgb(209, 206, 206);
-            border-radius: 10px;
+        .next {
+            right: 0;
+            border-radius: 3px 0 0 3px;
+        }
+
+        .prev {
+            left: 0;
+            border-radius: 3px 3px 3px 0;
+        }
+
+        .prev:hover, .next:hover {
+            background-color: rgba(0, 0, 0, 0.8);
         }
     </style>
+</head>
+
+<body>
     <div id="menu">
         <ul>
             <li><a href="#">3D-MOM</a>
@@ -99,73 +116,54 @@
         </ul>
     </div>
     <br />
-    <div
-        style="border: 2px solid rgb(209, 206, 206); border-radius: 15px; padding: 10px;width:1100px; margin:auto;box-shadow: 1px 1px 2px 6px rgb(209, 206, 206)">
-        <br />
-        <h1>
-            <p style="font-size:1.3em;text-align:center; font-family: 'Times New Roman'">Optimizing 4D Gaussians for Dynamic
-                Scene Video<br>from Single Landscape Images</p>
-        </h1>
-        <br />
-        <h2>
-            <p style="color:gray;font-size:0.9em;text-align:center; font-family: 'Times New Roman'">In-hwan Jin*, Haesoo
-                Choo*, Seong-Hun Jeong, Junghwan Kim, Heemoon Park, Oh-joon Kwon, and Kyeongbo Kong</p>
-        </h2>
-        <br />
-        <h2>
-            <p style="color:gray;font-size:0.5em;text-align:center; font-family: 'Times New Roman'">The symbol * signifies
-                equal contribution.</p>
-        </h2>
-        <br />
-        <h2>
-            <p style="color:gray;font-size:0.7em;text-align:center; font-family: 'Times New Roman';font-weight: normal;">Pukyong National University, Pusan National University, DMstudio co.</p>
-        </h2>
-        <br />
-        <div style="border: 2px solid white; border-radius: 15px; padding: 10px;width:1100px; margin:auto"></div>
-        <!--
-    <center>
-        <a href="Person-in-Place_8271.pdf">
-            <img src="pdf_img.png" width="40" alt="Main Paper"></a>
-            &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
-            <a href="https://anonymous.4open.science/r/Person-in-Place-4FF0">
-                <img src="github_img.png" width="50" alt="Main Code"></a>
-        
-    </center>
-    -->
-
-        <br />
-        <div class="video-container-wrapper">
-            <button class="arrow left" onclick="scrollVideos(-1)">&#8249;</button>
-            <div class="video-container">
-                <video controls autoplay loop muted>
-                    <source src="static/videos/NeurIPS_fig_1.mp4" type="video/mp4">
-                    Your browser does not support the video tag.
-                </video>
-                <video controls autoplay loop muted>
-                    <source src="static/videos/NeurIPS_fig_2.mp4" type="video/mp4">
-                    Your browser does not support the video tag.
-                </video>
-                <video controls autoplay loop muted>
-                    <source src="static/videos/NeurIPS_fig_3.mp4" type="video/mp4">
-                    Your browser does not support the video tag.
-                </video>
-                <!-- Add more videos as needed -->
-            </div>
-            <button class="arrow right" onclick="scrollVideos(1)">&#8250;</button>
+    <div class="slideshow-container">
+        <div class="video-slide">
+            <video width="1000" controls autoplay loop>
+                <source src="static/videos/circle.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
         </div>
+        <div class="video-slide">
+            <video width="1000" controls autoplay loop>
+                <source src="static/videos/side.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+        <div class="video-slide">
+            <video width="1000" controls autoplay loop>
+                <source src="static/videos/up_down.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+        <!-- Add more video slides as needed -->
 
-        <script>
-            let currentIndex = 0;
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    </div>
 
-            function scrollVideos(direction) {
-                const container = document.querySelector('.video-container');
-                const videos = container.querySelectorAll('video');
-                const totalVideos = videos.length;
-                currentIndex = (currentIndex + direction + totalVideos) % totalVideos;
-                const offset = -currentIndex * 100; // 100% width for each video
-                container.style.transform = `translateX(${offset}%)`;
+    <script>
+        let slideIndex = 0;
+        showSlides(slideIndex);
+
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+
+        function showSlides(n) {
+            let i;
+            let slides = document.getElementsByClassName("video-slide");
+            if (n >= slides.length) {
+                slideIndex = 0;
             }
-        </script>
+            if (n < 0) {
+                slideIndex = slides.length - 1;
+            }
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            slides[slideIndex].style.display = "block";
+        }
+    </script>
 
     <br/>
     <center>
