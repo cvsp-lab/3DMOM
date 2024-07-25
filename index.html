@@ -136,24 +136,27 @@
         <br/>
     <h2><p style="font-size:1.3em; font-family: 'Times New Roman';font-weight: normal;">3D-MOM Framework</p></h2>
     <br/>
-    <br/>
-        <img src="static/images/NeurIPS_fig_1.png" alt="My Image" width="1000">
-	<br/>
     <h3><p style="color:black;font-size:0.9em; font-family: 'Times New Roman';font-weight: normal;">
-        <strong>Overview of proposed framework</strong>: Our goal is to optimize 4D Gaussians to represent a complete 3D space, including animation, from a single image.
-	    <strong>(a)</strong> A depth map is estimated from the given single image, and it is converted into a point cloud. 
+        <strong>The overview of our pipeline.</strong>: Our goal is to optimize 4D Gaussians to represent a complete 3D space, including animation, from a single image.
+	    (a) A depth map is estimated from the given single image, and it is converted into a point cloud. 
 	    For optimizing the 3D Gaussians, multi-view RGB images are rendered according to the defined camera trajectory. 
-	    <strong>(b)</strong> Similarly, multi-view motion masks are rendered for the input motion mask. 
-	    These are utilized to estimate multi-view 2D motion maps along with the rendered RGB images.  
-	    3D motion is obtained by unprojecting the estimated 2D motion into the 3D domain.
+	    (b) Similarly, multi-view motion masks are rendered for the input motion mask. 
+	    These are utilized to estimate multi-view 2D motion maps along with the rendered RGB images. 
+	    3D motion is obtained by unprojecting the estimated 2D motion into the 3D domain. 
 	    In this context, the proposed <strong>3D Motion Optimization Module (3D-MOM)</strong> ensures consistent 3D motion across multi-views. 
-	    <strong>(c)</strong> Using the optimized 3D Gaussians and generated 3D motion, 4D Gaussians are optimized for changes in position, rotation, and scaling over time.</p></h3>
-	</div>
-	</div>
-        <center><img src="static/images/NeurIPS_fig_2.png" alt="My Image" width="500"></center>
+	    (c) Using the optimized 3D Gaussians and generated 3D motion, 4D Gaussians are optimized for changes in position, rotation, and scaling over time.</p></h3>
+        <br/>
+        <img src="static/images/NeurIPS_fig_1.png" alt="My Image" width="1000">
+        <br/>
+    </div>
+    </div>
+    <h3><p style="color:black;font-size:0.9em; font-family: 'Times New Roman';font-weight: normal;">
+	    
+    </p></h3>
+        <center><img src="static/images/NeurIPS_fig_2.png" alt="My Image" width="700"></center>
         <h3><p style="color:black;font-size:0.9em; font-family: 'Times New Roman';font-weight: normal;">
-		<strong>3D Motion Optimization Module.</strong> To maintain consistency of motion across multi-views, 3D motion is defined from the point cloud and projected into 2D images using camera parameters. 
-		The L1 loss between the projected motion and the estimated motion map as the ground truth is computed, minimizing the sum of losses for multi-view to optimize the 3D motion.
+        3D Motion Optimization Module. To maintain consistency of motion across multi-views, 3D motion is defined from the point cloud and projected into 2D images using camera parameters. 
+	    The L1 loss between the projected motion and the estimated motion map as the ground truth is computed, minimizing the sum of losses for multi-view to optimize the 3D motion.
         </p></h3>
             <br/>
 
