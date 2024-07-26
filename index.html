@@ -362,7 +362,6 @@
     <h2><p style="font-size:1.3em; font-family: 'Times New Roman';font-weight: normal;">Ablation Study</p></h2>
     <br/>
     <center><img src="static/videos/table2.png" alt="My Image" width="500"></center>
-    <br />
     <div class="slideshow-container" id="slideshow2">
         <div class="video-slide">
             <video width="1000" controls autoplay loop muted>
@@ -393,9 +392,6 @@
         <a class="prev" onclick="plusSlides(-1, 'slideshow2')">&#10094;</a>
         <a class="next" onclick="plusSlides(1, 'slideshow2')">&#10095;</a>
     </div>
-
-
-    <br/>
     <br/>
     <h3><p style="color:black;font-size:0.9em; font-family: 'Times New Roman';font-weight: normal;">
 	<strong>1) 3D Motion Optimization Module:</strong> Independently estimated 2D motion from multi-view images can result in different motion values for the same region in 3D space.
@@ -408,6 +404,8 @@
 	We animated viewpoint videos using each motion and trained 4D Gaussians on multi-view videos. 
 	However, as shown in Fig. 4 (b), the rendered video of 4D Gaussians and estimated optical flow have the lack of motion consistency in the viewpoint videos caused unnatural movements.
         
+    <br/>
+    <br/>
     <br/>
 <!--     <center><img src="CVPR_2024_jpg/test_input_supp_6.jpg" alt="My Image" width="1000"></center> -->
 	    <br/>
@@ -448,8 +446,9 @@
 	Fig. 5 shows the results of trained 4D Gaussians using animated videos by two single image animation models, SLR-SFS [8] and Text2Cinemagraph [9]. 
 	Comparing the rendered 4D Gaussians, we observe that the motion is trained differently depending on the single image animation model. 
 	Additionally, training with viewpoint videos animated by SLR-SFS [8], our model produced better results.
-	    <br>
-	    <br>
+    <br/>
+    <br/>
+    <br/>
         <center><img src="static/videos/table3.png" alt="My Image" width="500"></center>
 	    <br/>
 <!--         <center><img src="CVPR_2024_jpg/test_input_supp_6.jpg" alt="My Image" width="1000"></center> -->
@@ -491,8 +490,9 @@
 	accurately when trained only with viewpoint videos.
 	Fig. 6 shows the estimated optical flow from the rendered video of 4D Gaussians. This demonstrates that it is difficult to accurately learn motion without 3D motion initialization. 
 	In contrast, our method shows that it can learn the overall 3D motion.
-	    <br>
-	    <br>
+    <br/>
+    <br/>
+    <br/>
         <center><img src="static/videos/table4.png" alt="My Image" width="1000"></center>
 	    <br/>
 <!--         <center><img src="CVPR_2024_jpg/test_input_supp_6.jpg" alt="My Image" width="1000"></center> -->
