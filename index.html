@@ -326,12 +326,12 @@
     
     <br/>
     <h3><p style="color:black;font-size:0.9em; font-family: 'Times New Roman';font-weight: normal;">
-        <strong>(Top)</strong>: Qualitative results when generating a single person using CoModGAN, 
-        Instruct-Pix2Pix, Stable-Diffusion Inpainting (SD-Inpainting). 
-        <strong>(Top left)</strong> Incomplete or no humans are generated using other models. 
-        <strong>(Top right)</strong> Even though humans are generated, the misaligned or non-interactive humans are synthesized. 
-        <strong>(Bottom)</strong> : Demonstration of image editing with SD-inpainting, SDXL-inpainting and ours. 
-        Other models did not generate a human even using a guided skeleton.        
+	    We present qualitative comparison results with other baseline methods. In this case, our proposed model, as an explicit representation, is projected to 2D video for comparison of results. 
+	    The process of separating the input image into LDIs in 3D-Cinemagraphy leads to artifacts on animated regions and fails to provide natural motion which results in reduced realism. 
+	    Similarly, Make-It-4D also utilizes LDIs to represent 3D for multi-view generation, which results in lower visual quality. 
+	    Additionally, due to unclear layer separation, objects appear fragmented or exhibit ghosting effects, where objects seem to leave behind afterimages.
+	    In contrast, the proposed model represents a complete 3D space with animations, providing less visual artifact and high rendering quality from various camera viewpoints. 
+	    Therefore, our method provides more photorealistic results compared to others for various input images.
     <br/>
 
     <br/><p id="add_Visualization Results"></p>
@@ -349,33 +349,48 @@
     
     <br/>
     <h3><p style="color:black;font-size:0.9em; font-family: 'Times New Roman';font-weight: normal;">
-        <strong>Comparison between attention mechanism and associative attention mechanism:</strong> 
-        By employing our associative attention mechanism, the overall shape of skeleton becomes more natural as shown in images of a baby sitting on the bed or a man sitting on the yacht. 
-        Moreover, our associative attention mechanism generates more object-interactive poses, 
-        e.g. swinging, sitting, typing, as joints of the skeleton approach the object through propagation process. 
-        Moreover, even in scenarios with multiple objects, a natural skeleton is generated while interacting with the specified object.  
+	1) 3D Motion Optimization Module: Independently estimated 2D motion from multi-view images can result in different motion values for the same region in 3D space.
+	Directly using these 2D motions to animate viewpoint videos can fail to train 4D Gaussians to represent natural motion.
+	Table II shows the results of EPE between multi-view flows with and without the 3D Motion Optimization Module. 
+	The estimated motions are projected to the center point through a depth map for the same position measurement. 
+	The results indicate that without 3D Motion Optimization, estimated flows are significantly different for the same positions, while our 3D motion demonstrates outstanding performance in consistency across entire viewpoints with almost no variance. 
+	Fig. 4 (a) shows the visualized results of 2D motion and projected 3D motion. 
+	Similarly, it indicates that 3D motion represents motion information in 3D space, which ensures consistency when projected to different viewpoints. 
+	We animated viewpoint videos using each motion and trained 4D Gaussians on multi-view videos. 
+	However, as shown in Fig. 4 (b), the rendered video of 4D Gaussians and estimated optical flow have the lack of motion consistency in the viewpoint videos caused unnatural movements.
         
     <br/>
     <img src="CVPR_2024_jpg/test_input_supp_2.jpg" alt="My Image" width="1000">
     <img src="CVPR_2024_jpg/test_input_supp_3.jpg" alt="My Image" width="1000">
     <br/>
     <h3><p style="color:black;font-size:0.9em; font-family: 'Times New Roman';font-weight: normal;">
-        <strong>Comparion of CoModGAN, Instruct-Pix2Pix, SD-Inpainting and Ours:</strong>
-        We use a person bounding box, an object bounding box and a text prompt for HOI image editing. 
-        In most cases of the visualization results, CoModGAN and Instruct-Pix2Pix perform poorly in generating natural humans. 
-        Our results exhibit more object-interactive images than SD-Inpainting, as shown in cases of a woman with wearing a polka-dotted umbrella or a man surfing with the waves. 
-        For an example, in the case of 'A woman in pajamas using her laptop on the stove top in the kitchen', 
-        CoModGAN and SD-Inpainting did not generate even a human shape. Instruct-Pix2Pix failed to maintain the original image, 
-        while our method generated a natural woman that matches the text prompt.
+	2) Single image animation model: In our model, it is crucial to utilize a single image animation model that generates viewpoint videos by accurately reflecting 3D motion to train 4D Gaussians. 
+	Fig. 5 shows the results of trained 4D Gaussians using animated videos by two single image animation models, SLR-SFS [8] and Text2Cinemagraph [9]. 
+	Comparing the rendered 4D Gaussians, we observe that the motion is trained differently depending on the single image animation model. 
+	Additionally, training with viewpoint videos animated by SLR-SFS [8], our model produced better results.
+	    <br>
+	    <br>
         <img src="CVPR_2024_jpg/test_input_supp_5.jpg" alt="My Image" width="1000">
         <img src="CVPR_2024_jpg/test_input_supp_6.jpg" alt="My Image" width="1000">
         <br/>
     <h3><p style="color:black;font-size:0.9em; font-family: 'Times New Roman';font-weight: normal;">
-        <strong>Performing on multi-people images:</strong> 
-        This figure shows HOI-edited images of multiple people using SD-Inpainting, SDXL-Inpainting and Ours. 
-        In the first and second column, SD-Inpainting and SDXL-Inpainting fail to generate a human when a person bounding box is provided in a small size. 
-        On the other hand, our method generates natural HOI images regardless of a size of a person bounding box, 
-        since it utilizes object-interactive skeletons. As shown in the fourth column, 
-        people sitting on the sofa and children sitting on the sofa are generated naturally with our method.
+        3) Effect of 3D motion initialization: To verify the importance of 3D motion in training 4D Gaussians, we compared the results of our method with and without 3D motion initialization. 
+	When applying animation to fluids, repeated patterns occurred. In Table III, it shows EPE score of estimated optical flow from each rendered video. 
+	It indicates that the explicit representation of 4D Gaussians, which train multi-views and motion jointly, finds it difficult to capture the overall motion
+	accurately when trained only with viewpoint videos.
+	Fig. 6 shows the estimated optical flow from the rendered video of 4D Gaussians. This demonstrates that it is difficult to accurately learn motion without 3D motion initialization. 
+	In contrast, our method shows that it can learn the overall 3D motion.
+	    <br>
+	    <br>
+        <img src="CVPR_2024_jpg/test_input_supp_5.jpg" alt="My Image" width="1000">
+        <img src="CVPR_2024_jpg/test_input_supp_6.jpg" alt="My Image" width="1000">
+        <br/>
+    <h3><p style="color:black;font-size:0.9em; font-family: 'Times New Roman';font-weight: normal;">
+	4) Effect of Two-stage training: To achieve faster and more stable results with our algorithm, we separated the 4D Gaussians learning process by viewpoints and time axis. 
+	In step 1, we trained 3D Gaussians using all viewpoints, and in step 2, we trained 4D Gaussians using videos from sampled view-points. 
+	Fig. 7 shows the results of training 4D Gaussians with animated videos for all viewpoints, while the bottom shows the results of our two-stage training approach trained on only three viewpoint videos. 
+	This demonstrates that our training method produces results almost identical to those obtained by training with videos from all viewpoints. 
+	Additionally, as shown in Table IV , which was evaluated on a sample validation set, our method not only maintains high performance but also achieves a significant efficiency improvement. 
+	It is over 30 times faster in generating videos and requires about one-third less time to train the 4D Gaussians, demonstrating an optimal balance between speed and accuracy.
 </body>
 </html>
