@@ -360,7 +360,6 @@
         <br/>
         <div style="border: 2px solid white; border-radius: 15px; width:1000px; margin:auto;height: 200;">
     <h2><p style="font-size:1.3em; font-family: 'Times New Roman';font-weight: normal;">Ablation Study</p></h2>
-    <br/>
     <center><img src="static/videos/table2.png" alt="My Image" width="500"></center>
     <div class="slideshow-container" id="slideshow2">
         <div class="video-slide">
@@ -388,11 +387,9 @@
             </video>
         </div>
         <!-- Add more video slides as needed -->
-
         <a class="prev" onclick="plusSlides(-1, 'slideshow2')">&#10094;</a>
         <a class="next" onclick="plusSlides(1, 'slideshow2')">&#10095;</a>
     </div>
-    <br/>
     <h3><p style="color:black;font-size:0.9em; font-family: 'Times New Roman';font-weight: normal;">
 	<strong>1) 3D Motion Optimization Module:</strong> Independently estimated 2D motion from multi-view images can result in different motion values for the same region in 3D space.
 	Directly using these 2D motions to animate viewpoint videos can fail to train 4D Gaussians to represent natural motion.
@@ -440,7 +437,6 @@
         <a class="prev" onclick="plusSlides(-1, 'slideshow3')">&#10094;</a>
         <a class="next" onclick="plusSlides(1, 'slideshow3')">&#10095;</a>
     </div>
-    <br/>
     <h3><p style="color:black;font-size:0.9em; font-family: 'Times New Roman';font-weight: normal;">
 	<strong>2) Single image animation model:</strong> In our model, it is crucial to utilize a single image animation model that generates viewpoint videos by accurately reflecting 3D motion to train 4D Gaussians. 
 	Fig. 5 shows the results of trained 4D Gaussians using animated videos by two single image animation models, SLR-SFS [8] and Text2Cinemagraph [9]. 
@@ -450,7 +446,6 @@
     <br/>
     <br/>
         <center><img src="static/videos/table3.png" alt="My Image" width="500"></center>
-	    <br/>
 <!--         <center><img src="CVPR_2024_jpg/test_input_supp_6.jpg" alt="My Image" width="1000"></center> -->
         <div class="slideshow-container" id="slideshow4">
         <div class="video-slide">
@@ -482,7 +477,6 @@
         <a class="prev" onclick="plusSlides(-1, 'slideshow4')">&#10094;</a>
         <a class="next" onclick="plusSlides(1, 'slideshow4')">&#10095;</a>
     </div>
-        <br/>
     <h3><p style="color:black;font-size:0.9em; font-family: 'Times New Roman';font-weight: normal;">
         <strong>3) Effect of 3D motion initialization:</strong> To verify the importance of 3D motion in training 4D Gaussians, we compared the results of our method with and without 3D motion initialization. 
 	When applying animation to fluids, repeated patterns occurred. In Table III, it shows EPE score of estimated optical flow from each rendered video. 
@@ -494,7 +488,6 @@
     <br/>
     <br/>
         <center><img src="static/videos/table4.png" alt="My Image" width="1000"></center>
-	    <br/>
 <!--         <center><img src="CVPR_2024_jpg/test_input_supp_6.jpg" alt="My Image" width="1000"></center> -->
         <div class="slideshow-container" id="slideshow5">
         <div class="video-slide">
@@ -526,7 +519,6 @@
         <a class="prev" onclick="plusSlides(-1, 'slideshow5')">&#10094;</a>
         <a class="next" onclick="plusSlides(1, 'slideshow5')">&#10095;</a>
     </div>
-        <br/>
     <h3><p style="color:black;font-size:0.9em; font-family: 'Times New Roman';font-weight: normal;">
 	<strong>4) Effect of Two-stage training:</strong> To achieve faster and more stable results with our algorithm, we separated the 4D Gaussians learning process by viewpoints and time axis. 
 	In step 1, we trained 3D Gaussians using all viewpoints, and in step 2, we trained 4D Gaussians using videos from sampled view-points. 
