@@ -54,10 +54,13 @@
             padding: 10px;
         }
 
-        .video-slide {
-            display: block;
-            margin-bottom: 20px;
-        }
+	.video-slide {
+	    display: none;
+	}
+	
+	.video-slide.active {
+	    display: block;
+	}
 
         .prev, .next {
             cursor: pointer;
@@ -137,7 +140,7 @@
     </center>
     -->
     <br />
-    <div class="slideshow-container">
+    <div class="slideshow-container" id="slideshow1">
         <div class="video-slide">
             <video width="1000" controls autoplay loop muted>
                 <source src="static/videos/circle.mp4" type="video/mp4">
@@ -330,7 +333,7 @@
     <br/>
     <center><img src="static/videos/table2.png" alt="My Image" width="500"></center>
     <br />
-    <div class="slideshow-container">
+    <div class="slideshow-container" id="slideshow2">
         <div class="video-slide">
             <video width="1000" controls autoplay loop muted>
                 <source src="static/videos/1.3D_motion_optimzation/output_0.mp4" type="video/mp4">
@@ -379,7 +382,7 @@
 <!--     <center><img src="CVPR_2024_jpg/test_input_supp_6.jpg" alt="My Image" width="1000"></center> -->
 	    <br/>
 <!--     <center><img src="CVPR_2024_jpg/test_input_supp_3.jpg" alt="My Image" width="1000"></center> -->
-    <div class="slideshow-container">
+    <div class="slideshow-container" id="slideshow3">
         <div class="video-slide">
             <video width="1000" controls autoplay loop muted>
                 <source src="static/videos/1.3D_motion_optimzation/output_0.mp4" type="video/mp4">
@@ -420,7 +423,7 @@
         <center><img src="static/videos/table3.png" alt="My Image" width="500"></center>
 	    <br/>
 <!--         <center><img src="CVPR_2024_jpg/test_input_supp_6.jpg" alt="My Image" width="1000"></center> -->
-        <div class="slideshow-container">
+        <div class="slideshow-container" id="slideshow4">
         <div class="video-slide">
             <video width="1000" controls autoplay loop muted>
                 <source src="static/videos/1.3D_motion_optimzation/output_0.mp4" type="video/mp4">
@@ -463,7 +466,7 @@
         <center><img src="static/videos/table4.png" alt="My Image" width="1000"></center>
 	    <br/>
 <!--         <center><img src="CVPR_2024_jpg/test_input_supp_6.jpg" alt="My Image" width="1000"></center> -->
-        <div class="slideshow-container">
+        <div class="slideshow-container" id="slideshow5">
         <div class="video-slide">
             <video width="1000" controls autoplay loop muted>
                 <source src="static/videos/1.3D_motion_optimzation/output_0.mp4" type="video/mp4">
@@ -504,47 +507,30 @@
 </body>
 </html>
 
-<!-- <script>
-    let slideIndex = 0;
-    showSlides(slideIndex);
-
-    function plusSlides(n) {
-        showSlides(slideIndex += n);
+<script>
+    function plusSlides(n, slideshowId) {
+        showSlides(slideIndex[slideshowId] += n, slideshowId);
     }
 
-    function showSlides(n) {
-        let slides = document.getElementsByClassName("video-slide");
+    function showSlides(n, slideshowId) {
+        let i;
+        let slides = document.querySelectorAll(`#${slideshowId} .video-slide`);
         if (n >= slides.length) {
-            slideIndex = 0;
+            slideIndex[slideshowId] = 0;
         } else if (n < 0) {
-            slideIndex = slides.length - 1;
+            slideIndex[slideshowId] = slides.length - 1;
         }
-        for (let i = 0; i < slides.length; i++) {
-            slides[i].style.display = "none";
+        for (i = 0; i < slides.length; i++) {
+            slides[i].classList.remove('active');
         }
-        slides[slideIndex].style.display = "block";
-    }
-</script> -->
-<!-- <script>
-    let slideIndex = 0;
-    showSlides(slideIndex);
-
-    function plusSlides(n) {
-	showSlides(slideIndex += n);
+        slides[slideIndex[slideshowId]].classList.add('active');
     }
 
-    function showSlides(n) {
-	let i;
-	let slides = document.getElementsByClassName("video-slide");
-	if (n >= slides.length) {
-	    slideIndex = 0;
-	}
-	if (n < 0) {
-	    slideIndex = slides.length - 1;
-	}
-	for (i = 0; i < slides.length; i++) {
-	    slides[i].style.display = "none";
-	}
-	slides[slideIndex].style.display = "block";
-    }
-</script> -->
+    let slideIndex = {};
+    document.querySelectorAll('.slideshow-container').forEach(container => {
+        let id = container.id;
+        slideIndex[id] = 0;
+        showSlides(slideIndex[id], id);
+    });
+</script>
+
