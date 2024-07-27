@@ -90,6 +90,20 @@
         .prev:hover, .next:hover {
             background-color: rgba(0, 0, 0, 0.8);
         }
+
+        /* Flexbox 추가 */
+        .flex-container {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin: 20px 0;
+        }
+
+        .flex-container img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
     </style>
 </head>
 
@@ -360,7 +374,12 @@
         <br/>
         <div style="border: 2px solid white; border-radius: 15px; width:1000px; margin:auto;height: 200;">
     <h2><p style="font-size:1.3em; font-family: 'Times New Roman';font-weight: normal;">Ablation Study</p></h2>
-    <center><img src="static/videos/table2.png" alt="My Image" width="500"></center>
+    <!-- Flexbox를 이용하여 이미지 2개 병렬 배치 -->
+    <div class="flex-container">
+        <center><img src="static/videos/ablation1.png" alt="My Image" width="500"></center>
+        <center><img src="static/videos/table2.png" alt="My Image" width="500"></center>
+    </div>
+    
     <div class="slideshow-container" id="slideshow2">
         <div class="video-slide">
             <video width="1000" controls autoplay loop muted>
