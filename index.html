@@ -433,8 +433,8 @@
     <h3><p style="font-size:1.3em; font-family: 'Times New Roman';font-weight: normal;">1) 3D Motion Optimization Module</p></h3>
     <!-- Flexbox를 이용하여 이미지 2개 병렬 배치 -->
     <div class="flex-container">
-        <center><img src="static/videos/ablation1.png" alt="My Image" width="400"></center>
-        <center><img src="static/videos/table2.png" alt="My Image" width="600"></center>
+        <center><img src="static/videos/ablation1.png" alt="My Image" width="380"></center>
+        <center><img src="static/videos/table2.png" alt="My Image" width="580"></center>
     </div>
     <div class="slideshow-container" id="slideshow2">
         <div class="video-slide">
@@ -475,10 +475,10 @@
 	Table II shows the results of EPE between multi-view flows with and without the 3D Motion Optimization Module. 
 	The estimated motions are projected to the center point through a depth map for the same position measurement. 
 	The results indicate that without 3D Motion Optimization, estimated flows are significantly different for the same positions, while our 3D motion demonstrates outstanding performance in consistency across entire viewpoints with almost no variance. 
-	Fig. 4 (a) shows the visualized results of 2D motion and projected 3D motion. 
+	(a) shows the visualized results of 2D motion and projected 3D motion. 
 	Similarly, it indicates that 3D motion represents motion information in 3D space, which ensures consistency when projected to different viewpoints. 
 	We animated viewpoint videos using each motion and trained 4D Gaussians on multi-view videos. 
-	However, as shown in Fig. 4 (b), the rendered video of 4D Gaussians and estimated optical flow have the lack of motion consistency in the viewpoint videos caused unnatural movements.
+	However, as shown in (b), the rendered video of 4D Gaussians and estimated optical flow have the lack of motion consistency in the viewpoint videos caused unnatural movements.
         
     <br/>
     <br/>
@@ -523,9 +523,9 @@
     </div>
     <h3><p style="color:black;font-size:0.9em; font-family: 'Times New Roman';font-weight: normal;">
 	<strong>2) Single image animation model:</strong> In our model, it is crucial to utilize a single image animation model that generates viewpoint videos by accurately reflecting 3D motion to train 4D Gaussians. 
-	Fig. 5 shows the results of trained 4D Gaussians using animated videos by two single image animation models, SLR-SFS [8] and Text2Cinemagraph [9]. 
+	Figure shows the results of trained 4D Gaussians using animated videos by two single image animation models, SLR-SFS and Text2Cinemagraph. 
 	Comparing the rendered 4D Gaussians, we observe that the motion is trained differently depending on the single image animation model. 
-	Additionally, training with viewpoint videos animated by SLR-SFS [8], our model produced better results.
+	Additionally, training with viewpoint videos animated by SLR-SFS, our model produced better results.
     <br/>
     <br/>
     <br/>
@@ -577,7 +577,7 @@
 	When applying animation to fluids, repeated patterns occurred. In Table III, it shows EPE score of estimated optical flow from each rendered video. 
 	It indicates that the explicit representation of 4D Gaussians, which train multi-views and motion jointly, finds it difficult to capture the overall motion
 	accurately when trained only with viewpoint videos.
-	Fig. 6 shows the estimated optical flow from the rendered video of 4D Gaussians. This demonstrates that it is difficult to accurately learn motion without 3D motion initialization. 
+	Figure shows the estimated optical flow from the rendered video of 4D Gaussians. This demonstrates that it is difficult to accurately learn motion without 3D motion initialization. 
 	In contrast, our method shows that it can learn the overall 3D motion.
     <br/>
     <br/>
@@ -625,7 +625,7 @@
     <h3><p style="color:black;font-size:0.9em; font-family: 'Times New Roman';font-weight: normal;">
 	<strong>4) Effect of Two-stage training:</strong> To achieve faster and more stable results with our algorithm, we separated the 4D Gaussians learning process by viewpoints and time axis. 
 	In step 1, we trained 3D Gaussians using all viewpoints, and in step 2, we trained 4D Gaussians using videos from sampled view-points. 
-	Fig. 7 shows the results of training 4D Gaussians with animated videos for all viewpoints, while the bottom shows the results of our two-stage training approach trained on only three viewpoint videos. 
+	Figure shows the results of training 4D Gaussians with animated videos for all viewpoints, while the bottom shows the results of our two-stage training approach trained on only three viewpoint videos. 
 	This demonstrates that our training method produces results almost identical to those obtained by training with videos from all viewpoints. 
 	Additionally, as shown in Table IV , which was evaluated on a sample validation set, our method not only maintains high performance but also achieves a significant efficiency improvement. 
 	It is over 30 times faster in generating videos and requires about one-third less time to train the 4D Gaussians, demonstrating an optimal balance between speed and accuracy.
