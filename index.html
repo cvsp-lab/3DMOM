@@ -220,7 +220,7 @@
     <h2><p style="font-size:1.3em;text-align:center; font-family: 'Times New Roman';font-weight: normal;">Abstract</p></h2>
     <br/>
     <div style="border: 2px solid white; border-radius: 15px; width:1000px; margin:auto;height: 200;">
-    <h3><p style="color:black;font-size:0.9em; font-family: 'Times New Roman';font-weight: normal;">To achieve realistic immersion in landscape images, 
+    <h3><p style="color:black;font-size:0.9em; font-family: 'Times New Roman';font-weight: normal;text-align: justify;">To achieve realistic immersion in landscape images, 
 	    fluids such as water and clouds need to move within the image while revealing new scenes from various camera perspectives. 
 	    Recently, a field called dynamic scene video has emerged, which combines single image animation with 3D photography. 
 	    These methods use pseudo 3D space, implicitly represented with Layered Depth Images (LDIs). 
@@ -242,7 +242,7 @@
         <br/>
     <h2><p style="font-size:1.3em; font-family: 'Times New Roman';font-weight: normal;">3D-MOM Framework</p></h2>
     <br/>
-    <h3><p style="color:black;font-size:0.9em; font-family: 'Times New Roman';font-weight: normal;">
+    <h3><p style="color:black;font-size:0.9em; font-family: 'Times New Roman';font-weight: normal;text-align: justify;">
         <strong>The overview of our pipeline.</strong>: Our goal is to optimize 4D Gaussians to represent a complete 3D space, including animation, from a single image.
 	    <strong>(a)</strong> A depth map is estimated from the given single image, and it is converted into a point cloud. 
 	    For optimizing the 3D Gaussians, multi-view RGB images are rendered according to the defined camera trajectory. 
@@ -256,7 +256,7 @@
         <br/>
 	    <br>
 	    <br>
-    <h3><p style="color:black;font-size:0.9em; font-family: 'Times New Roman';font-weight: normal;">
+    <h3><p style="color:black;font-size:0.9em; font-family: 'Times New Roman';font-weight: normal;text-align: justify;">
 	    <strong>3D Motion Optimization Module.</strong> To maintain consistency of motion across multi-views, 3D motion is defined from the point cloud and projected into 2D images using camera parameters. 
 	    The L1 loss between the projected motion and the estimated motion map as the ground truth is computed, minimizing the sum of losses for multi-view to optimize the 3D motion.
     </p></h3>
@@ -280,7 +280,7 @@
     <h2><p style="font-size:1.3em; font-family: 'Times New Roman';font-weight: normal;">Quantitative Results</p></h2>
     <br/>
     
-        <h3><p style="color:black;font-size:0.9em; font-family: 'Times New Roman';font-weight: normal;">
+        <h3><p style="color:black;font-size:0.9em; font-family: 'Times New Roman';font-weight: normal;text-align: justify;">
 		<strong>Results comparing our framework to the previous dynamic scene video model:</strong> Our approach outperforms the other baseline on all metrics in the context of view generation. 
 		In particular, our method achieved the highest scores in PSNR, SSIM, and LPIPS, indicating that the generated views are of high fidelity and perceptually similar to the ground truth views.
 		Furthermore, we demonstrated that our proposed method outperforms existing methods on non-reference metrics by locally measuring the extent of noise and distortion in images using PIQE.
@@ -409,7 +409,7 @@
     </div>
     
     <br/>
-    <h3><p style="color:black;font-size:0.9em; font-family: 'Times New Roman';font-weight: normal;">
+    <h3><p style="color:black;font-size:0.9em; font-family: 'Times New Roman';font-weight: normal;text-align: justify;">
 	    We present qualitative comparison results with other baseline methods. In this case, our proposed model, as an explicit representation, is projected to 2D video for comparison of results. 
 	    The process of separating the input image into LDIs in 3D-Cinemagraphy leads to artifacts on animated regions and fails to provide natural motion which results in reduced realism. 
 	    Similarly, Make-It-4D also utilizes LDIs to represent 3D for multi-view generation, which results in lower visual quality. 
@@ -426,7 +426,7 @@
     <br/>
     <div style="border: 2px solid rgb(209, 206, 206); border-radius: 15px; padding: 10px;width:1100px; margin:auto;box-shadow: 1px 1px 2px 6px rgb(209, 206, 206)">
         <br/>
-        <div style="border: 2px solid white; border-radius: 15px; width:1000px; margin:auto;height: 200;">
+        <div style="border: 2px solid white; border-radius: 15px; width:1000px; margin:auto;height: 200;text-align: justify;">
     <h2><p style="font-size:1.3em; font-family: 'Times New Roman';font-weight: normal;">Ablation Study</p></h2>
 	    <br/>
 	    <br/>
@@ -473,7 +473,7 @@
         <a class="prev" onclick="plusSlides(-1, 'slideshow2')">&#10094;</a>
         <a class="next" onclick="plusSlides(1, 'slideshow2')">&#10095;</a>
     </div>
-    <h3><p style="color:black;font-size:0.9em; font-family: 'Times New Roman';font-weight: normal;">
+    <h3><p style="color:black;font-size:0.9em; font-family: 'Times New Roman';font-weight: normal;text-align: justify;">
 	<strong>1) 3D Motion Optimization Module:</strong> Independently estimated 2D motion from multi-view images can result in different motion values for the same region in 3D space.
 	Directly using these 2D motions to animate viewpoint videos can fail to train 4D Gaussians to represent natural motion.
 	Table II shows the results of EPE between multi-view flows with and without the 3D Motion Optimization Module. 
@@ -525,7 +525,7 @@
         <a class="prev" onclick="plusSlides(-1, 'slideshow3')">&#10094;</a>
         <a class="next" onclick="plusSlides(1, 'slideshow3')">&#10095;</a>
     </div>
-    <h3><p style="color:black;font-size:0.9em; font-family: 'Times New Roman';font-weight: normal;">
+    <h3><p style="color:black;font-size:0.9em; font-family: 'Times New Roman';font-weight: normal;text-align: justify;">
 	<strong>2) Single image animation model:</strong> In our model, it is crucial to utilize a single image animation model that generates viewpoint videos by accurately reflecting 3D motion to train 4D Gaussians. 
 	Figure shows the results of trained 4D Gaussians using animated videos by two single image animation models, SLR-SFS and Text2Cinemagraph. 
 	Comparing the rendered 4D Gaussians, we observe that the motion is trained differently depending on the single image animation model. 
@@ -576,7 +576,7 @@
         <a class="prev" onclick="plusSlides(-1, 'slideshow4')">&#10094;</a>
         <a class="next" onclick="plusSlides(1, 'slideshow4')">&#10095;</a>
     </div>
-    <h3><p style="color:black;font-size:0.9em; font-family: 'Times New Roman';font-weight: normal;">
+    <h3><p style="color:black;font-size:0.9em; font-family: 'Times New Roman';font-weight: normal;text-align: justify;">
         <strong>3) Effect of 3D motion initialization:</strong> To verify the importance of 3D motion in training 4D Gaussians, we compared the results of our method with and without 3D motion initialization. 
 	When applying animation to fluids, repeated patterns occurred. In Table III, it shows EPE score of estimated optical flow from each rendered video. 
 	It indicates that the explicit representation of 4D Gaussians, which train multi-views and motion jointly, finds it difficult to capture the overall motion
@@ -626,7 +626,7 @@
         <a class="prev" onclick="plusSlides(-1, 'slideshow5')">&#10094;</a>
         <a class="next" onclick="plusSlides(1, 'slideshow5')">&#10095;</a>
     </div>
-    <h3><p style="color:black;font-size:0.9em; font-family: 'Times New Roman';font-weight: normal;">
+    <h3><p style="color:black;font-size:0.9em; font-family: 'Times New Roman';font-weight: normal;text-align: justify;">
 	<strong>4) Effect of Two-stage training:</strong> To achieve faster and more stable results with our algorithm, we separated the 4D Gaussians learning process by viewpoints and time axis. 
 	In step 1, we trained 3D Gaussians using all viewpoints, and in step 2, we trained 4D Gaussians using videos from sampled view-points. 
 	Figure shows the results of training 4D Gaussians with animated videos for all viewpoints, while the bottom shows the results of our two-stage training approach trained on only three viewpoint videos. 
