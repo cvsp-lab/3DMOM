@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <head>
     <meta charset="utf-8" />
-    <title>3D-MOM</title>
+    <title>3D-MRM_anonymous</title>
     <style type="text/css">
         * {
             margin: 0;
@@ -105,8 +105,54 @@
             height: auto;
             border-radius: 10px;
         }
+	    .media-container {
+	        display: flex;
+	        flex-direction: column;
+	        align-items: center;
+	    }
+	
+	    .top-banner-image {
+	        width: 100%;
+	        height: auto;
+	    }
+	
+	    .content-row {
+	        display: flex;
+	        justify-content: space-between;
+	        align-items: center;
+	        width: 100%;
+	    }
+	
+	    .media-element {
+	        width: 50%;
+	        height: auto;
+	    }
+	    .custom-size {
+	    width: 49%; /* 원하는 크기로 조절 */
+	    height: auto; /* 이미지의 비율을 유지 */
+	    }	
+	    
+	    .wide-video {
+            width: 1000px; /* 가로 길이 1000px */
+            height: auto; /* 비율 유지 */
+            display: block;
+            margin: 20px auto; /* 센터 정렬을 위해 추가 */
+        }
     </style>
+	<script>
+	MathJax = {
+	  tex: {
+	    inlineMath: [['$', '$'], ['\\(', '\\)']]
+	  },
+	  svg: {
+	    fontCache: 'global'
+	  }
+	};
+	</script>
+	<script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML' async></script>
 </head>
+
+
 
 <body>
 <!--     <div id="menu">
@@ -133,59 +179,143 @@
         </ul>
     </div> -->
     <br/>
-    <div style="border: 2px solid rgb(209, 206, 206); border-radius: 15px; padding: 10px;width:1100px; margin:auto;box-shadow: 1px 1px 2px 6px rgb(209, 206, 206)">
+<div style="border: 2px solid rgb(209, 206, 206); border-radius: 15px; padding: 10px;width:1100px; margin:auto;box-shadow: 1px 1px 2px 6px rgb(209, 206, 206)">
         <br/>
-    <h1><p style="font-size:1.3em;text-align:center; font-family: 'Times New Roman'">Optimizing 4D Gaussians for Dynamic Scene Video<br>from Single Landscape Images</p></h1>
+    <h1><p style="font-size:1.3em;text-align:center; font-family: 'Times New Roman'">Optimizing 4D Gaussians for Dynamic Scene Video from Single Landscape Images</p></h1>
     <br/>
-<!--     <h2><p style="color:gray;font-size:0.9em;text-align:center; font-family: 'Times New Roman'">In-hwan Jin*, Haesoo Choo*, Seong-Hun Jeong, Junghwan Kim, Heemoon Park, Oh-joon Kwon, and Kyeongbo Kong</p></h2> -->
     <h2><p style="color:gray;font-size:0.9em;text-align:center; font-family: 'Times New Roman'">Anonymous authors</p></h2>
-<!--     <br/>
-    <h2><p style="color:gray;font-size:0.5em;text-align:center; font-family: 'Times New Roman'">* Equal contribution.</p></h2>
     <br/>
-    <h2><p style="color:gray;font-size:0.7em;text-align:center; font-family: 'Times New Roman';font-weight: normal;">Pukyong National University, Pusan National University, DMstudio co.</p></h2>
-    <br/> -->
     <div style="border: 2px solid white; border-radius: 15px; padding: 10px;width:1100px; margin:auto"></div>
-        <!--
-    <center>
-        <a href="Person-in-Place_8271.pdf">
-            <img src="pdf_img.png" width="40" alt="Main Paper"></a>
-            &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
-            <a href="https://anonymous.4open.science/r/Person-in-Place-4FF0">
-                <img src="github_img.png" width="50" alt="Main Code"></a>
-        
-    </center>
-    -->
     <br />
     <div class="slideshow-container" id="slideshow1">
-        <div class="video-slide">
-            <video width="1000" controls autoplay loop muted>
-                <source src="static/videos/main/zoom.mp4" type="video/mp4">
-                Your browser does not support the video tag.
+<div class="video-slide">
+        <div class="media-container">
+	    <img src="static/videos/title.png" alt="Top Banner Image" class="top-banner-image">
+		<div class="content-row">
+		<img src="static/videos/0.png" alt="Sample Image" class="media-element custom-size">
+                <video class="media-element" controls autoplay loop muted>
+                    <source src="static/videos/main/zoom.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+		</div>
+        </div>
+    </div>
+    <div class="video-slide">
+        <div class="media-container">
+	    <img src="static/videos/title.png" alt="Top Banner Image" class="top-banner-image">
+		<div class="content-row">
+		<img src="static/videos/43.jpg" alt="Sample Image" class="media-element custom-size">
+                <video class="media-element" controls autoplay loop muted>
+                    <source src="static/videos/5.additional_results/zoom43.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+		</div>
+        </div>
+    </div>
+    <div class="video-slide">
+        <div class="media-container">
+            <img src="static/videos/title.png" alt="Top Banner Image" class="top-banner-image">
+		<div class="content-row">
+		<img src="static/videos/44.jpg" alt="Sample Image" class="media-element custom-size">
+                <video class="media-element" controls autoplay loop muted>
+                    <source src="static/videos/5.additional_results/side44.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
             </video>
         </div>
-        <div class="video-slide">
-            <video width="1000" controls autoplay loop muted>
-                <source src="static/videos/main/side.mp4" type="video/mp4">
-                Your browser does not support the video tag.
+    </div>
+    </div>
+    <div class="video-slide">
+        <div class="media-container">
+            <img src="static/videos/title.png" alt="Top Banner Image" class="top-banner-image">
+		<div class="content-row">
+		<img src="static/videos/41.jpg" alt="Sample Image" class="media-element custom-size">
+                <video class="media-element" controls autoplay loop muted>
+                    <source src="static/videos/5.additional_results/side41.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
             </video>
         </div>
-        <div class="video-slide">
-            <video width="1000" controls autoplay loop muted>
-                <source src="static/videos/main/up_down.mp4" type="video/mp4">
-                Your browser does not support the video tag.
+    </div>
+    </div>
+    <div class="video-slide">
+        <div class="media-container">
+            <img src="static/videos/title.png" alt="Top Banner Image" class="top-banner-image">
+		<div class="content-row">
+		<img src="static/videos/34.jpg" alt="Sample Image" class="media-element custom-size">
+                <video class="media-element" controls autoplay loop muted>
+                    <source src="static/videos/5.additional_results/up34.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
             </video>
         </div>
-	<div class="video-slide">
-            <video width="1000" controls autoplay loop muted>
-                <source src="static/videos/main/circle.mp4" type="video/mp4">
-                Your browser does not support the video tag.
+    </div>
+    </div>
+    <div class="video-slide">
+        <div class="media-container">
+            <img src="static/videos/title.png" alt="Top Banner Image" class="top-banner-image">
+		<div class="content-row">
+		<img src="static/videos/38.jpg" alt="Sample Image" class="media-element custom-size">
+                <video class="media-element" controls autoplay loop muted>
+                    <source src="static/videos/5.additional_results/up38.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
             </video>
         </div>
-        <!-- Add more video slides as needed -->
+    </div>
+    </div>
+    <div class="video-slide">
+        <div class="media-container">
+            <img src="static/videos/title.png" alt="Top Banner Image" class="top-banner-image">
+		<div class="content-row">
+		<img src="static/videos/45.jpg" alt="Sample Image" class="media-element custom-size">
+                <video class="media-element" controls autoplay loop muted>
+                    <source src="static/videos/5.additional_results/up45.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+            </video>
+        </div>
+    </div>
+    </div>
+    <div class="video-slide">
+        <div class="media-container">
+            <img src="static/videos/title.png" alt="Top Banner Image" class="top-banner-image">
+		<div class="content-row">
+		<img src="static/videos/35.jpg" alt="Sample Image" class="media-element custom-size">
+                <video class="media-element" controls autoplay loop muted>
+                    <source src="static/videos/5.additional_results/zoom35.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+            </video>
+        </div>
+    </div>
+    </div>
+    <div class="video-slide">
+        <div class="media-container">
+            <img src="static/videos/title.png" alt="Top Banner Image" class="top-banner-image">
+		<div class="content-row">
+		<img src="static/videos/40.jpg" alt="Sample Image" class="media-element custom-size">
+                <video class="media-element" controls autoplay loop muted>
+                    <source src="static/videos/5.additional_results/zoom40.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+            </video>
+        </div>
+    </div>
+    </div>
+    <div class="video-slide">
+        <div class="media-container">
+            <img src="static/videos/title.png" alt="Top Banner Image" class="top-banner-image">
+		<div class="content-row">
+		<img src="static/videos/39.jpg" alt="Sample Image" class="media-element custom-size">
+                <video class="media-element" controls autoplay loop muted>
+                    <source src="static/videos/5.additional_results/side39.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+            </video>
+        </div>
+    </div>
+    </div>
+	    
+    <!-- Add more video slides as needed -->
 
         <a class="prev" onclick="plusSlides(-1, 'slideshow1')">&#10094;</a>
         <a class="next" onclick="plusSlides(1, 'slideshow1')">&#10095;</a>
     </div>
+	
+    <br/>
 
 	
 
